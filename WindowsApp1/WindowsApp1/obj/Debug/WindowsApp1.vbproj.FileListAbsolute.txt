@@ -1,0 +1,30 @@
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\miche\Documents\Documentos Memo\ADS\Projeto do Bertão - Pizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Login.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_login.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_pedidos.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_entregador.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_gerente.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_clientes.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_pizzaiolo.resources
