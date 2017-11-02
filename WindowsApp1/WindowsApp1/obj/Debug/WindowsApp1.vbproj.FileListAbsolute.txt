@@ -26,5 +26,4 @@ C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação
 C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_entregador.resources
 C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_gerente.resources
 C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_clientes.resources
-C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
 C:\Users\miche\Documents\Documentos Memo\ADS\Módulo II\Sistemas de Informação\Projeto do Bertão - Pizzaria\SistemaPizzaria\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.frm_pizzaiolo.resources

@@ -9,4 +9,13 @@
         txt_referencia.Clear()
         txt_rua.Clear()
     End Sub
+
+    Private Sub btn_seguir_Click(sender As Object, e As EventArgs) Handles btn_seguir.Click
+        If ((txt_telres.Text = "(11)" Or txt_telres.Text = "") And (txt_cel.Text = "(11)" Or txt_cel.Text = "")) Or txt_estado.Text = "" Or txt_bairro.Text = "" Or txt_cidade.Text = "" Or txt_comp.Text = "" Or txt_referencia.Text = "" Or txt_rua.Text = "" Then
+            MsgBox("Campos em branco!", vbInformation + vbOKOnly, "Atenção")
+        Else
+            Me.Close()
+            frm_pedidos.Show()
+        End If
+    End Sub
 End Class
