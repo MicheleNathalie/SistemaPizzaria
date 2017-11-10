@@ -45,7 +45,7 @@ Partial Class frm_login
         Me.gb_login.Controls.Add(Me.txt_senha)
         Me.gb_login.Controls.Add(Me.txt_cpf)
         Me.gb_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.gb_login.Font = New System.Drawing.Font("Moon Flower", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gb_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gb_login.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.gb_login.Location = New System.Drawing.Point(226, 86)
         Me.gb_login.Name = "gb_login"
@@ -67,28 +67,28 @@ Partial Class frm_login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Moon Flower Bold", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(161, 128)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 36)
+        Me.Label2.Size = New System.Drawing.Size(135, 39)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Senha: "
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Moon Flower Bold", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(161, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 36)
+        Me.Label1.Size = New System.Drawing.Size(105, 39)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "CPF: "
         '
         'txt_senha
         '
-        Me.txt_senha.Font = New System.Drawing.Font("Moon Flower", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_senha.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_senha.ForeColor = System.Drawing.Color.Black
         Me.txt_senha.Location = New System.Drawing.Point(167, 165)
         Me.txt_senha.Name = "txt_senha"
@@ -99,7 +99,7 @@ Partial Class frm_login
         '
         'txt_cpf
         '
-        Me.txt_cpf.Font = New System.Drawing.Font("Moon Flower", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_cpf.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_cpf.ForeColor = System.Drawing.Color.Black
         Me.txt_cpf.Location = New System.Drawing.Point(167, 76)
         Me.txt_cpf.Name = "txt_cpf"
@@ -114,7 +114,7 @@ Partial Class frm_login
         Me.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_entrar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray
         Me.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_entrar.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_entrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_entrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btn_entrar.Image = CType(resources.GetObject("btn_entrar.Image"), System.Drawing.Image)
         Me.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft

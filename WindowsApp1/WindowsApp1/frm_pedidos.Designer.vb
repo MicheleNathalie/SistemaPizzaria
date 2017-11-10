@@ -24,10 +24,11 @@ Partial Class frm_pedidos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pedidos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cb_entrega = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_valor = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,7 +37,6 @@ Partial Class frm_pedidos
         Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
         Me.txt_entrega = New System.Windows.Forms.TextBox()
-        Me.cb_entrega = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,7 +55,7 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txt_valor)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.txt_entrega)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -64,13 +64,24 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.clb_sabores)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cmb_quantidade)
-        Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Tomato
         Me.GroupBox1.Location = New System.Drawing.Point(36, 38)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(831, 428)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'cb_entrega
+        '
+        Me.cb_entrega.AutoSize = True
+        Me.cb_entrega.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cb_entrega.Location = New System.Drawing.Point(18, 254)
+        Me.cb_entrega.Name = "cb_entrega"
+        Me.cb_entrega.Size = New System.Drawing.Size(128, 35)
+        Me.cb_entrega.TabIndex = 6
+        Me.cb_entrega.Text = "Entrega"
+        Me.cb_entrega.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -110,16 +121,16 @@ Partial Class frm_pedidos
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(417, 356)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 29)
+        Me.Label4.Size = New System.Drawing.Size(153, 31)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Valor Total:"
         '
-        'TextBox1
+        'txt_valor
         '
-        Me.TextBox1.Location = New System.Drawing.Point(441, 379)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(106, 39)
-        Me.TextBox1.TabIndex = 9
+        Me.txt_valor.Location = New System.Drawing.Point(441, 379)
+        Me.txt_valor.Name = "txt_valor"
+        Me.txt_valor.Size = New System.Drawing.Size(106, 38)
+        Me.txt_valor.TabIndex = 9
         '
         'DataGridView1
         '
@@ -179,26 +190,15 @@ Partial Class frm_pedidos
         '
         Me.txt_entrega.Location = New System.Drawing.Point(25, 279)
         Me.txt_entrega.Name = "txt_entrega"
-        Me.txt_entrega.Size = New System.Drawing.Size(149, 39)
+        Me.txt_entrega.Size = New System.Drawing.Size(149, 38)
         Me.txt_entrega.TabIndex = 7
-        '
-        'cb_entrega
-        '
-        Me.cb_entrega.AutoSize = True
-        Me.cb_entrega.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cb_entrega.Location = New System.Drawing.Point(18, 254)
-        Me.cb_entrega.Name = "cb_entrega"
-        Me.cb_entrega.Size = New System.Drawing.Size(93, 33)
-        Me.cb_entrega.TabIndex = 6
-        Me.cb_entrega.Text = "Entrega"
-        Me.cb_entrega.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(13, 176)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 29)
+        Me.Label3.Size = New System.Drawing.Size(136, 31)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Tamanho:"
         '
@@ -208,7 +208,7 @@ Partial Class frm_pedidos
         Me.cmb_tamanho.FormattingEnabled = True
         Me.cmb_tamanho.Location = New System.Drawing.Point(25, 198)
         Me.cmb_tamanho.Name = "cmb_tamanho"
-        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 37)
+        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 39)
         Me.cmb_tamanho.TabIndex = 4
         '
         'Label2
@@ -216,18 +216,18 @@ Partial Class frm_pedidos
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(177, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 29)
+        Me.Label2.Size = New System.Drawing.Size(123, 31)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Sabores:"
         '
         'clb_sabores
         '
         Me.clb_sabores.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.clb_sabores.Font = New System.Drawing.Font("Moon Flower Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clb_sabores.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clb_sabores.FormattingEnabled = True
         Me.clb_sabores.Location = New System.Drawing.Point(191, 63)
         Me.clb_sabores.Name = "clb_sabores"
-        Me.clb_sabores.Size = New System.Drawing.Size(196, 355)
+        Me.clb_sabores.Size = New System.Drawing.Size(196, 342)
         Me.clb_sabores.TabIndex = 2
         '
         'Label1
@@ -235,7 +235,7 @@ Partial Class frm_pedidos
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(13, 92)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 29)
+        Me.Label1.Size = New System.Drawing.Size(162, 31)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Quantidade:"
         '
@@ -245,7 +245,7 @@ Partial Class frm_pedidos
         Me.cmb_quantidade.FormattingEnabled = True
         Me.cmb_quantidade.Location = New System.Drawing.Point(25, 115)
         Me.cmb_quantidade.Name = "cmb_quantidade"
-        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 37)
+        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 39)
         Me.cmb_quantidade.TabIndex = 0
         '
         'frm_pedidos
@@ -279,7 +279,7 @@ Partial Class frm_pedidos
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_valor As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents num As DataGridViewTextBoxColumn
     Friend WithEvents Quantidade As DataGridViewTextBoxColumn
