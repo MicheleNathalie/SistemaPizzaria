@@ -22,26 +22,30 @@
                         sql = "select * from tb_login where senha='" & txt_senha.Text & "'"
                         If txt_senha.Text = rs.Fields(3).Value Then
                             MsgBox("Acesso permitido!!")
-                            tipo = rs.Fields(7).Value
-                            limpar()
+                            tipo = rs.Fields(4).Value
+                            MsgBox("tipo=" & tipo)
                             If tipo = "Vendedor" Then
                                 frm_clientes.ShowDialog()
                                 Me.Hide()
-                                Exit Sub
+                                limpar()
+                                '  Exit Sub
                             End If
-                            If tipo = "pizzaiolo" Then
+                            If tipo = "Pizzaiolo" Then
                                 frm_pizzaiolo.ShowDialog()
                                 Me.Hide()
-                                Exit Sub
+                                limpar()
+                                ' Exit Sub
                             End If
                             If tipo = "Entregador" Then
                                 frm_entregador.ShowDialog()
                                 Me.Hide()
+                                limpar()
                                 Exit Sub
                             End If
                             If tipo = "Gerente" Then
                                 frm_gerente.ShowDialog()
                                 Me.Hide()
+                                limpar()
                                 Exit Sub
                             End If
 
@@ -53,7 +57,7 @@
                 End If
             End If
         Catch ex As Exception
-
+            MsgBox("Erro!!")
         End Try
     End Sub
 
