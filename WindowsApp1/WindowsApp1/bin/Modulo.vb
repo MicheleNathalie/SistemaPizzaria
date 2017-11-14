@@ -11,7 +11,6 @@
         Try
             db = CreateObject("ADODB.Connection")
             db.Open("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=" & conexao)
-            MsgBox("Conexão bem sucedida")
         Catch ex As Exception
             MsgBox("Erro de conexão")
         End Try

@@ -25,6 +25,8 @@ Partial Class frm_clientes
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_clientes))
         Me.btn_seguir = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_numero = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_referencia = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -40,8 +42,6 @@ Partial Class frm_clientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_telres = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt_numero = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,6 +93,26 @@ Partial Class frm_clientes
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Dados Cadastrais"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(118, 102)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(118, 31)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Número:"
+        '
+        'txt_numero
+        '
+        Me.txt_numero.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_numero.Location = New System.Drawing.Point(124, 136)
+        Me.txt_numero.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txt_numero.Name = "txt_numero"
+        Me.txt_numero.Size = New System.Drawing.Size(88, 38)
+        Me.txt_numero.TabIndex = 16
         '
         'Label8
         '
@@ -243,7 +263,6 @@ Partial Class frm_clientes
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Coral
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(124, 370)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -253,26 +272,6 @@ Partial Class frm_clientes
         Me.Button1.Text = "Limpar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(118, 102)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 31)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Número:"
-        '
-        'txt_numero
-        '
-        Me.txt_numero.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_numero.Location = New System.Drawing.Point(124, 136)
-        Me.txt_numero.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.txt_numero.Name = "txt_numero"
-        Me.txt_numero.Size = New System.Drawing.Size(88, 38)
-        Me.txt_numero.TabIndex = 16
         '
         'frm_clientes
         '
