@@ -1,7 +1,7 @@
 ﻿Module Modulo
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql, diretorio As String
+    Public sql, diretorio, tipo As String
     Public conexao = Application.StartupPath & "\cadastro.mdb"
     Public cont As Long
     Public aux, resp, nivel As String
@@ -19,13 +19,13 @@
     Sub limpar()
         With frm_clientes
             .txt_bairro.Clear()
-            .txt_cel.Text = ("(11)")
             .txt_cidade.Clear()
             .txt_comp.Clear()
             .txt_estado.Text = ("SP")
             .txt_referencia.Clear()
             .txt_rua.Clear()
             .txt_telres.Text = ("(11)")
+            .txt_numero.Clear()
         End With
         With frm_login
             .txt_cpf.Clear()

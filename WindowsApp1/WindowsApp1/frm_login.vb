@@ -1,5 +1,4 @@
 ﻿Public Class frm_login
-    Dim tipo As String
     Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
         Try
             If txt_cpf.Text = "" Or txt_senha.Text = "" Then
@@ -23,7 +22,6 @@
                         If txt_senha.Text = rs.Fields(3).Value Then
                             MsgBox("Acesso permitido!!")
                             tipo = rs.Fields(4).Value
-                            MsgBox("tipo=" & tipo)
                             If tipo = "Vendedor" Then
                                 frm_clientes.ShowDialog()
                                 Me.Hide()
