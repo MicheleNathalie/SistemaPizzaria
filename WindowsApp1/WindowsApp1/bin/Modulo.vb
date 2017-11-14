@@ -19,7 +19,6 @@
     Sub limpar()
         With frm_clientes
             .txt_bairro.Clear()
-            .txt_cel.Text = ("(11)")
             .txt_cidade.Clear()
             .txt_comp.Clear()
             .txt_estado.Text = ("SP")

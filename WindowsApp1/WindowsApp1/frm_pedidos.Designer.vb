@@ -24,9 +24,13 @@ Partial Class frm_pedidos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pedidos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txt_obs = New System.Windows.Forms.TextBox()
+        Me.cb_borda = New System.Windows.Forms.CheckBox()
+        Me.cmb_borda = New System.Windows.Forms.ComboBox()
         Me.cb_entrega = New System.Windows.Forms.CheckBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_ok = New System.Windows.Forms.Button()
+        Me.btn_confirmar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_valor = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -51,9 +55,13 @@ Partial Class frm_pedidos
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.txt_obs)
+        Me.GroupBox1.Controls.Add(Me.cb_borda)
+        Me.GroupBox1.Controls.Add(Me.cmb_borda)
         Me.GroupBox1.Controls.Add(Me.cb_entrega)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btn_ok)
+        Me.GroupBox1.Controls.Add(Me.btn_confirmar)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt_valor)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
@@ -64,7 +72,7 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.clb_sabores)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cmb_quantidade)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Tomato
         Me.GroupBox1.Location = New System.Drawing.Point(36, 38)
         Me.GroupBox1.Name = "GroupBox1"
@@ -72,65 +80,103 @@ Partial Class frm_pedidos
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(13, 323)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(115, 30)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Observações:"
+        '
+        'txt_obs
+        '
+        Me.txt_obs.Font = New System.Drawing.Font("Moon Flower Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_obs.Location = New System.Drawing.Point(25, 347)
+        Me.txt_obs.Multiline = True
+        Me.txt_obs.Name = "txt_obs"
+        Me.txt_obs.Size = New System.Drawing.Size(149, 58)
+        Me.txt_obs.TabIndex = 15
+        '
+        'cb_borda
+        '
+        Me.cb_borda.AutoSize = True
+        Me.cb_borda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cb_borda.Location = New System.Drawing.Point(18, 247)
+        Me.cb_borda.Name = "cb_borda"
+        Me.cb_borda.Size = New System.Drawing.Size(76, 34)
+        Me.cb_borda.TabIndex = 13
+        Me.cb_borda.Text = "Borda"
+        Me.cb_borda.UseVisualStyleBackColor = True
+        '
+        'cmb_borda
+        '
+        Me.cmb_borda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_borda.FormattingEnabled = True
+        Me.cmb_borda.Location = New System.Drawing.Point(25, 273)
+        Me.cmb_borda.Name = "cmb_borda"
+        Me.cmb_borda.Size = New System.Drawing.Size(149, 38)
+        Me.cmb_borda.TabIndex = 14
+        '
         'cb_entrega
         '
         Me.cb_entrega.AutoSize = True
         Me.cb_entrega.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cb_entrega.Location = New System.Drawing.Point(18, 254)
+        Me.cb_entrega.Location = New System.Drawing.Point(18, 175)
         Me.cb_entrega.Name = "cb_entrega"
-        Me.cb_entrega.Size = New System.Drawing.Size(128, 35)
+        Me.cb_entrega.Size = New System.Drawing.Size(95, 34)
         Me.cb_entrega.TabIndex = 6
         Me.cb_entrega.Text = "Entrega"
         Me.cb_entrega.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_ok
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightGray
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(348, 380)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(39, 39)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "OK"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_ok.BackColor = System.Drawing.Color.LightGray
+        Me.btn_ok.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ok.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btn_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_ok.ForeColor = System.Drawing.Color.SandyBrown
+        Me.btn_ok.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_ok.Location = New System.Drawing.Point(358, 383)
+        Me.btn_ok.Name = "btn_ok"
+        Me.btn_ok.Size = New System.Drawing.Size(43, 39)
+        Me.btn_ok.TabIndex = 12
+        Me.btn_ok.Text = "OK"
+        Me.btn_ok.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btn_confirmar
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightGray
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(601, 368)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(182, 39)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Confirmar Pedido"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_confirmar.BackColor = System.Drawing.Color.LightGray
+        Me.btn_confirmar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_confirmar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_confirmar.ForeColor = System.Drawing.Color.SandyBrown
+        Me.btn_confirmar.Image = CType(resources.GetObject("btn_confirmar.Image"), System.Drawing.Image)
+        Me.btn_confirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_confirmar.Location = New System.Drawing.Point(624, 363)
+        Me.btn_confirmar.Name = "btn_confirmar"
+        Me.btn_confirmar.Size = New System.Drawing.Size(182, 39)
+        Me.btn_confirmar.TabIndex = 11
+        Me.btn_confirmar.Text = "Confirmar Pedido"
+        Me.btn_confirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_confirmar.UseVisualStyleBackColor = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(417, 356)
+        Me.Label4.Location = New System.Drawing.Point(442, 341)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(153, 31)
+        Me.Label4.Size = New System.Drawing.Size(117, 30)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Valor Total:"
         '
         'txt_valor
         '
-        Me.txt_valor.Location = New System.Drawing.Point(441, 379)
+        Me.txt_valor.Location = New System.Drawing.Point(466, 364)
         Me.txt_valor.Name = "txt_valor"
-        Me.txt_valor.Size = New System.Drawing.Size(106, 38)
+        Me.txt_valor.Size = New System.Drawing.Size(106, 41)
         Me.txt_valor.TabIndex = 9
+        Me.txt_valor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'DataGridView1
         '
@@ -138,9 +184,9 @@ Partial Class frm_pedidos
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Valor, Me.Excluir})
-        Me.DataGridView1.Location = New System.Drawing.Point(405, 63)
+        Me.DataGridView1.Location = New System.Drawing.Point(407, 62)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(401, 290)
+        Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
         Me.DataGridView1.TabIndex = 8
         '
         'num
@@ -188,17 +234,18 @@ Partial Class frm_pedidos
         '
         'txt_entrega
         '
-        Me.txt_entrega.Location = New System.Drawing.Point(25, 279)
+        Me.txt_entrega.Location = New System.Drawing.Point(25, 200)
         Me.txt_entrega.Name = "txt_entrega"
-        Me.txt_entrega.Size = New System.Drawing.Size(149, 38)
+        Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
         Me.txt_entrega.TabIndex = 7
+        Me.txt_entrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 176)
+        Me.Label3.Location = New System.Drawing.Point(13, 107)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 31)
+        Me.Label3.Size = New System.Drawing.Size(87, 30)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Tamanho:"
         '
@@ -206,9 +253,9 @@ Partial Class frm_pedidos
         '
         Me.cmb_tamanho.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmb_tamanho.FormattingEnabled = True
-        Me.cmb_tamanho.Location = New System.Drawing.Point(25, 198)
+        Me.cmb_tamanho.Location = New System.Drawing.Point(25, 129)
         Me.cmb_tamanho.Name = "cmb_tamanho"
-        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 39)
+        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 38)
         Me.cmb_tamanho.TabIndex = 4
         '
         'Label2
@@ -216,26 +263,26 @@ Partial Class frm_pedidos
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(177, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 31)
+        Me.Label2.Size = New System.Drawing.Size(80, 30)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Sabores:"
         '
         'clb_sabores
         '
         Me.clb_sabores.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.clb_sabores.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clb_sabores.Font = New System.Drawing.Font("Moon Flower", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clb_sabores.FormattingEnabled = True
         Me.clb_sabores.Location = New System.Drawing.Point(191, 63)
         Me.clb_sabores.Name = "clb_sabores"
-        Me.clb_sabores.Size = New System.Drawing.Size(196, 342)
+        Me.clb_sabores.Size = New System.Drawing.Size(196, 328)
         Me.clb_sabores.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 92)
+        Me.Label1.Location = New System.Drawing.Point(13, 40)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 31)
+        Me.Label1.Size = New System.Drawing.Size(112, 30)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Quantidade:"
         '
@@ -243,9 +290,9 @@ Partial Class frm_pedidos
         '
         Me.cmb_quantidade.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmb_quantidade.FormattingEnabled = True
-        Me.cmb_quantidade.Location = New System.Drawing.Point(25, 115)
+        Me.cmb_quantidade.Location = New System.Drawing.Point(25, 63)
         Me.cmb_quantidade.Name = "cmb_quantidade"
-        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 39)
+        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
         Me.cmb_quantidade.TabIndex = 0
         '
         'frm_pedidos
@@ -276,8 +323,8 @@ Partial Class frm_pedidos
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_entrega As TextBox
     Friend WithEvents cb_entrega As CheckBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_ok As Button
+    Friend WithEvents btn_confirmar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_valor As TextBox
     Friend WithEvents DataGridView1 As DataGridView
@@ -287,4 +334,8 @@ Partial Class frm_pedidos
     Friend WithEvents Sabor As DataGridViewTextBoxColumn
     Friend WithEvents Valor As DataGridViewTextBoxColumn
     Friend WithEvents Excluir As DataGridViewImageColumn
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txt_obs As TextBox
+    Friend WithEvents cb_borda As CheckBox
+    Friend WithEvents cmb_borda As ComboBox
 End Class
