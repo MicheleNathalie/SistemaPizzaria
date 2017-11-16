@@ -67,10 +67,10 @@
         Dim font2 As New System.Drawing.Font(privateFonts.Families(0), 25)
         Label1.Font = font2
         Label2.Font = font2
-        gb_login.Font = font
-        btn_entrar.Font = font
-        txt_cpf.Font = font
-        txt_senha.Font = font
+        gb_login.Font = Font
+        btn_entrar.Font = Font
+        txt_cpf.Font = Font
+        txt_senha.Font = Font
         conecta_banco()
     End Sub
 End Class

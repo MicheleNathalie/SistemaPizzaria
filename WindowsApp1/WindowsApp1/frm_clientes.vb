@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        verifica_cliente = 0
+        'verifica_cliente = 0
         conecta_banco()
     End Sub
 
