@@ -36,7 +36,7 @@
             .cb_entrega.Checked = False
             .txt_valor.Clear()
             .cmb_quantidade.Text = ""
-            .cmb_tamanho.SelectedIndex = 2
+            .cmb_tamanho.Text = ""
         End With
     End Sub
 End Module

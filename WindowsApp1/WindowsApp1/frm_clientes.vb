@@ -12,24 +12,30 @@
     End Sub
 
     Private Sub btn_seguir_Click(sender As Object, e As EventArgs) Handles btn_seguir.Click
-        If (txt_telres.Text = "(11)" Or txt_telres.Text = "") Or txt_estado.Text = "" Or txt_bairro.Text = "" Or txt_cidade.Text = "" Or txt_rua.Text = "" Then
-            MsgBox("Campos em branco!", vbInformation + vbOKOnly, "Atenção")
-        Else
-            If (verifica_cliente = 1) Then
-                sql = "insert into tb_cliente(telefone,nome,rua,numero,bairro,complemento,referencia,cidade,estado)  values ('" & txt_telres.Text & "', '" & txt_nome.Text & "' , '" & txt_rua.Text & "'," &
-                    "" & txt_numero.Text & ",'" & txt_bairro.Text & "','" & txt_comp.Text & "','" & txt_referencia.Text & "'," &
-                    "'" & txt_cidade.Text & "','" & txt_estado.Text & "')"
-                rs = db.Execute(sql)
-                MsgBox("Novo cliente cadastrado!!")
+        Try
+
+
+            If (txt_telres.Text = "(11)" Or txt_telres.Text = "") Or txt_estado.Text = "" Or txt_bairro.Text = "" Or txt_cidade.Text = "" Or txt_rua.Text = "" Then
+                MsgBox("Campos em branco!", vbInformation + vbOKOnly, "Atenção")
+            Else
+                If (verifica_cliente = 1) Then
+                    sql = "insert into tb_cliente(telefone,nome,rua,numero,bairro,complemento,referencia,cidade,estado)  values ('" & txt_telres.Text & "', '" & txt_nome.Text & "' , '" & txt_rua.Text & "'," &
+                        "" & txt_numero.Text & ",'" & txt_bairro.Text & "','" & txt_comp.Text & "','" & txt_referencia.Text & "'," &
+                        "'" & txt_cidade.Text & "','" & txt_estado.Text & "')"
+                    rs = db.Execute(sql)
+                    MsgBox("Novo cliente cadastrado!!")
+                End If
+                limpar()
+                Me.Hide()
+                frm_pedidos.ShowDialog()
             End If
-            limpar()
-            Me.Hide()
-            frm_pedidos.ShowDialog()
-        End If
+        Catch ex As Exception
+            MsgBox("ERRO!!")
+        End Try
     End Sub
 
     Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'verifica_cliente = 0
+        verifica_cliente = 0
         conecta_banco()
     End Sub
 
@@ -38,10 +44,11 @@
     End Sub
 
     Private Sub txt_telres_LostFocus(sender As Object, e As EventArgs) Handles txt_telres.LostFocus
+        verifica_cliente = 0
         sql = "select * from tb_cliente where telefone='" & txt_telres.Text & "'"
         rs = db.Execute(sql)
         If rs.BOF = True Then
-            MessageBox.Show("Usuário não cadastrado!!" + vbNewLine + "Ele será cadastro ao clicar em seguinte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show("Usuário não cadastrado!!" + vbNewLine + "Ele será cadastro ao clicar em seguinte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             verifica_cliente = 1
         Else
             txt_bairro.Text = rs.Fields(4).Value

@@ -1,28 +1,5 @@
 ﻿Public Class frm_pedidos
     Private Sub frm_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim privateFonts As New System.Drawing.Text.PrivateFontCollection()
-        privateFonts.AddFontFile(Application.StartupPath & "\Fontes\Moon Flower Bold.ttf")
-        Dim font As New System.Drawing.Font(privateFonts.Families(0), 22)
-        Dim font2 As New System.Drawing.Font(privateFonts.Families(0), 25)
-        Label1.Font = font2
-        Label2.Font = font2
-        Label3.Font = font2
-        Label4.Font = font2
-        Label5.Font = font2
-        cb_entrega.Font = font2
-        cb_borda.Font = font2
-        btn_confirmar.Font = font2
-        btn_ok.Font = font2
-        cmb_quantidade.Font = font
-        cmb_borda.Font = font
-        cmb_tamanho.Font = font
-        txt_entrega.Font = font
-        txt_obs.Font = font
-        txt_valor.Font = font
-        clb_sabores.Font = font
-        DataGridView1.Font = font
-
-
         With cmb_quantidade.Items
             .Add("Meia")
             .Add("1")
