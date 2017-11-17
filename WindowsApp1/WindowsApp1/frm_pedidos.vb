@@ -67,4 +67,8 @@
     Private Sub cb_borda_CheckedChanged(sender As Object, e As EventArgs) Handles cb_borda.CheckedChanged
         cmb_borda.Enabled = True
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 End Class

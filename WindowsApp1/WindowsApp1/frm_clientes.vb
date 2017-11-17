@@ -25,8 +25,7 @@
                     rs = db.Execute(sql)
                     MsgBox("Novo cliente cadastrado!!")
                 End If
-                limpar()
-                Me.Hide()
+                Me.Close()
                 frm_pedidos.ShowDialog()
             End If
         Catch ex As Exception

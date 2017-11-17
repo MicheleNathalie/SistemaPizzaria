@@ -47,6 +47,7 @@ Partial Class frm_pedidos
         Me.Sabor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.observacao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,7 +185,7 @@ Partial Class frm_pedidos
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.Excluir})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.observacao, Me.Excluir})
         Me.DataGridView1.Location = New System.Drawing.Point(407, 62)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
@@ -294,6 +295,12 @@ Partial Class frm_pedidos
         Me.Valor.Name = "Valor"
         Me.Valor.ReadOnly = True
         '
+        'observacao
+        '
+        Me.observacao.Frozen = True
+        Me.observacao.HeaderText = "Observação"
+        Me.observacao.Name = "observacao"
+        '
         'Excluir
         '
         Me.Excluir.Frozen = True
@@ -345,5 +352,6 @@ Partial Class frm_pedidos
     Friend WithEvents Sabor As DataGridViewTextBoxColumn
     Friend WithEvents Borda As DataGridViewTextBoxColumn
     Friend WithEvents Valor As DataGridViewTextBoxColumn
+    Friend WithEvents observacao As DataGridViewTextBoxColumn
     Friend WithEvents Excluir As DataGridViewImageColumn
 End Class
