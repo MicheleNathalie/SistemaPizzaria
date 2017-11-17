@@ -34,12 +34,6 @@ Partial Class frm_pedidos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_valor = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tamanho = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sabor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
         Me.txt_entrega = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
@@ -47,6 +41,13 @@ Partial Class frm_pedidos
         Me.clb_sabores = New System.Windows.Forms.CheckedListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
+        Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tamanho = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sabor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -183,54 +184,11 @@ Partial Class frm_pedidos
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Valor, Me.Excluir})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.Excluir})
         Me.DataGridView1.Location = New System.Drawing.Point(407, 62)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
         Me.DataGridView1.TabIndex = 8
-        '
-        'num
-        '
-        Me.num.Frozen = True
-        Me.num.HeaderText = "-"
-        Me.num.Name = "num"
-        Me.num.ReadOnly = True
-        '
-        'Quantidade
-        '
-        Me.Quantidade.Frozen = True
-        Me.Quantidade.HeaderText = "Quantidade"
-        Me.Quantidade.Name = "Quantidade"
-        Me.Quantidade.ReadOnly = True
-        '
-        'Tamanho
-        '
-        Me.Tamanho.Frozen = True
-        Me.Tamanho.HeaderText = "Tamanho"
-        Me.Tamanho.Name = "Tamanho"
-        Me.Tamanho.ReadOnly = True
-        '
-        'Sabor
-        '
-        Me.Sabor.Frozen = True
-        Me.Sabor.HeaderText = "Sabor"
-        Me.Sabor.Name = "Sabor"
-        Me.Sabor.ReadOnly = True
-        '
-        'Valor
-        '
-        Me.Valor.Frozen = True
-        Me.Valor.HeaderText = "Valor"
-        Me.Valor.Name = "Valor"
-        Me.Valor.ReadOnly = True
-        '
-        'Excluir
-        '
-        Me.Excluir.Frozen = True
-        Me.Excluir.HeaderText = "Excluir"
-        Me.Excluir.Image = CType(resources.GetObject("Excluir.Image"), System.Drawing.Image)
-        Me.Excluir.Name = "Excluir"
-        Me.Excluir.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'txt_entrega
         '
@@ -295,6 +253,55 @@ Partial Class frm_pedidos
         Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
         Me.cmb_quantidade.TabIndex = 0
         '
+        'num
+        '
+        Me.num.Frozen = True
+        Me.num.HeaderText = "-"
+        Me.num.Name = "num"
+        Me.num.ReadOnly = True
+        '
+        'Quantidade
+        '
+        Me.Quantidade.Frozen = True
+        Me.Quantidade.HeaderText = "Quantidade"
+        Me.Quantidade.Name = "Quantidade"
+        Me.Quantidade.ReadOnly = True
+        '
+        'Tamanho
+        '
+        Me.Tamanho.Frozen = True
+        Me.Tamanho.HeaderText = "Tamanho"
+        Me.Tamanho.Name = "Tamanho"
+        Me.Tamanho.ReadOnly = True
+        '
+        'Sabor
+        '
+        Me.Sabor.Frozen = True
+        Me.Sabor.HeaderText = "Sabor"
+        Me.Sabor.Name = "Sabor"
+        Me.Sabor.ReadOnly = True
+        '
+        'Borda
+        '
+        Me.Borda.Frozen = True
+        Me.Borda.HeaderText = "Borda"
+        Me.Borda.Name = "Borda"
+        '
+        'Valor
+        '
+        Me.Valor.Frozen = True
+        Me.Valor.HeaderText = "Valor"
+        Me.Valor.Name = "Valor"
+        Me.Valor.ReadOnly = True
+        '
+        'Excluir
+        '
+        Me.Excluir.Frozen = True
+        Me.Excluir.HeaderText = "Excluir"
+        Me.Excluir.Image = CType(resources.GetObject("Excluir.Image"), System.Drawing.Image)
+        Me.Excluir.Name = "Excluir"
+        Me.Excluir.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
         'frm_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -328,14 +335,15 @@ Partial Class frm_pedidos
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_valor As TextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents num As DataGridViewTextBoxColumn
-    Friend WithEvents Quantidade As DataGridViewTextBoxColumn
-    Friend WithEvents Tamanho As DataGridViewTextBoxColumn
-    Friend WithEvents Sabor As DataGridViewTextBoxColumn
-    Friend WithEvents Valor As DataGridViewTextBoxColumn
-    Friend WithEvents Excluir As DataGridViewImageColumn
     Friend WithEvents Label5 As Label
     Friend WithEvents txt_obs As TextBox
     Friend WithEvents cb_borda As CheckBox
     Friend WithEvents cmb_borda As ComboBox
+    Friend WithEvents num As DataGridViewTextBoxColumn
+    Friend WithEvents Quantidade As DataGridViewTextBoxColumn
+    Friend WithEvents Tamanho As DataGridViewTextBoxColumn
+    Friend WithEvents Sabor As DataGridViewTextBoxColumn
+    Friend WithEvents Borda As DataGridViewTextBoxColumn
+    Friend WithEvents Valor As DataGridViewTextBoxColumn
+    Friend WithEvents Excluir As DataGridViewImageColumn
 End Class

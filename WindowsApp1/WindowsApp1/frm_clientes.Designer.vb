@@ -42,6 +42,8 @@ Partial Class frm_clientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_telres = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txt_nome = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,6 +69,8 @@ Partial Class frm_clientes
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.txt_nome)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_numero)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -98,7 +102,7 @@ Partial Class frm_clientes
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(118, 102)
+        Me.Label2.Location = New System.Drawing.Point(202, 102)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(118, 31)
@@ -108,7 +112,7 @@ Partial Class frm_clientes
         'txt_numero
         '
         Me.txt_numero.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_numero.Location = New System.Drawing.Point(124, 136)
+        Me.txt_numero.Location = New System.Drawing.Point(208, 136)
         Me.txt_numero.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_numero.Name = "txt_numero"
         Me.txt_numero.Size = New System.Drawing.Size(88, 38)
@@ -219,7 +223,7 @@ Partial Class frm_clientes
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(388, 39)
+        Me.Label3.Location = New System.Drawing.Point(32, 102)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 31)
@@ -229,27 +233,27 @@ Partial Class frm_clientes
         'txt_rua
         '
         Me.txt_rua.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_rua.Location = New System.Drawing.Point(393, 62)
+        Me.txt_rua.Location = New System.Drawing.Point(23, 136)
         Me.txt_rua.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_rua.Name = "txt_rua"
-        Me.txt_rua.Size = New System.Drawing.Size(270, 38)
+        Me.txt_rua.Size = New System.Drawing.Size(181, 38)
         Me.txt_rua.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(108, 39)
+        Me.Label1.Location = New System.Drawing.Point(21, 38)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(276, 31)
+        Me.Label1.Size = New System.Drawing.Size(128, 31)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Telefone Residencial:"
+        Me.Label1.Text = "Telefone:"
         '
         'txt_telres
         '
         Me.txt_telres.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_telres.Location = New System.Drawing.Point(113, 65)
+        Me.txt_telres.Location = New System.Drawing.Point(27, 72)
         Me.txt_telres.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txt_telres.Name = "txt_telres"
         Me.txt_telres.Size = New System.Drawing.Size(200, 38)
@@ -272,6 +276,26 @@ Partial Class frm_clientes
         Me.Button1.Text = "Limpar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Location = New System.Drawing.Point(225, 38)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(94, 31)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Nome:"
+        '
+        'txt_nome
+        '
+        Me.txt_nome.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nome.Location = New System.Drawing.Point(231, 73)
+        Me.txt_nome.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txt_nome.Name = "txt_nome"
+        Me.txt_nome.Size = New System.Drawing.Size(411, 38)
+        Me.txt_nome.TabIndex = 18
         '
         'frm_clientes
         '
@@ -312,4 +336,6 @@ Partial Class frm_clientes
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_numero As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txt_nome As TextBox
 End Class
