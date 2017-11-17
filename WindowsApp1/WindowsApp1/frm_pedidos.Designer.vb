@@ -34,13 +34,6 @@ Partial Class frm_pedidos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_valor = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.txt_entrega = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.clb_sabores = New System.Windows.Forms.CheckedListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
         Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tamanho = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,6 +42,13 @@ Partial Class frm_pedidos
         Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.observacao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.txt_entrega = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.clb_sabores = New System.Windows.Forms.CheckedListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -191,6 +191,61 @@ Partial Class frm_pedidos
         Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
         Me.DataGridView1.TabIndex = 8
         '
+        'num
+        '
+        Me.num.Frozen = True
+        Me.num.HeaderText = "-"
+        Me.num.Name = "num"
+        Me.num.ReadOnly = True
+        '
+        'Quantidade
+        '
+        Me.Quantidade.Frozen = True
+        Me.Quantidade.HeaderText = "Quantidade"
+        Me.Quantidade.Name = "Quantidade"
+        Me.Quantidade.ReadOnly = True
+        '
+        'Tamanho
+        '
+        Me.Tamanho.Frozen = True
+        Me.Tamanho.HeaderText = "Tamanho"
+        Me.Tamanho.Name = "Tamanho"
+        Me.Tamanho.ReadOnly = True
+        '
+        'Sabor
+        '
+        Me.Sabor.Frozen = True
+        Me.Sabor.HeaderText = "Sabor"
+        Me.Sabor.Name = "Sabor"
+        Me.Sabor.ReadOnly = True
+        '
+        'Borda
+        '
+        Me.Borda.Frozen = True
+        Me.Borda.HeaderText = "Borda"
+        Me.Borda.Name = "Borda"
+        '
+        'Valor
+        '
+        Me.Valor.Frozen = True
+        Me.Valor.HeaderText = "Valor"
+        Me.Valor.Name = "Valor"
+        Me.Valor.ReadOnly = True
+        '
+        'observacao
+        '
+        Me.observacao.Frozen = True
+        Me.observacao.HeaderText = "Observação"
+        Me.observacao.Name = "observacao"
+        '
+        'Excluir
+        '
+        Me.Excluir.Frozen = True
+        Me.Excluir.HeaderText = "Excluir"
+        Me.Excluir.Image = CType(resources.GetObject("Excluir.Image"), System.Drawing.Image)
+        Me.Excluir.Name = "Excluir"
+        Me.Excluir.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
         'txt_entrega
         '
         Me.txt_entrega.Location = New System.Drawing.Point(25, 200)
@@ -253,61 +308,6 @@ Partial Class frm_pedidos
         Me.cmb_quantidade.Name = "cmb_quantidade"
         Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
         Me.cmb_quantidade.TabIndex = 0
-        '
-        'num
-        '
-        Me.num.Frozen = True
-        Me.num.HeaderText = "-"
-        Me.num.Name = "num"
-        Me.num.ReadOnly = True
-        '
-        'Quantidade
-        '
-        Me.Quantidade.Frozen = True
-        Me.Quantidade.HeaderText = "Quantidade"
-        Me.Quantidade.Name = "Quantidade"
-        Me.Quantidade.ReadOnly = True
-        '
-        'Tamanho
-        '
-        Me.Tamanho.Frozen = True
-        Me.Tamanho.HeaderText = "Tamanho"
-        Me.Tamanho.Name = "Tamanho"
-        Me.Tamanho.ReadOnly = True
-        '
-        'Sabor
-        '
-        Me.Sabor.Frozen = True
-        Me.Sabor.HeaderText = "Sabor"
-        Me.Sabor.Name = "Sabor"
-        Me.Sabor.ReadOnly = True
-        '
-        'Borda
-        '
-        Me.Borda.Frozen = True
-        Me.Borda.HeaderText = "Borda"
-        Me.Borda.Name = "Borda"
-        '
-        'Valor
-        '
-        Me.Valor.Frozen = True
-        Me.Valor.HeaderText = "Valor"
-        Me.Valor.Name = "Valor"
-        Me.Valor.ReadOnly = True
-        '
-        'observacao
-        '
-        Me.observacao.Frozen = True
-        Me.observacao.HeaderText = "Observação"
-        Me.observacao.Name = "observacao"
-        '
-        'Excluir
-        '
-        Me.Excluir.Frozen = True
-        Me.Excluir.HeaderText = "Excluir"
-        Me.Excluir.Image = CType(resources.GetObject("Excluir.Image"), System.Drawing.Image)
-        Me.Excluir.Name = "Excluir"
-        Me.Excluir.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'frm_pedidos
         '
