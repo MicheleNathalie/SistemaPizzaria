@@ -23,17 +23,118 @@ Partial Class frm_entregador
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_entregador))
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.numpedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rua = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.comp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.bairro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.entregar = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ListView1
+        'DataGridView1
         '
-        Me.ListView1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ListView1.Location = New System.Drawing.Point(111, 47)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(681, 391)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.pedido, Me.rua, Me.numero, Me.comp, Me.bairro, Me.cidade, Me.estado, Me.nome, Me.entregar})
+        Me.DataGridView1.Location = New System.Drawing.Point(92, 61)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(725, 383)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'numpedido
+        '
+        Me.numpedido.HeaderText = "Número de Pedido"
+        Me.numpedido.Name = "numpedido"
+        '
+        'pedido
+        '
+        Me.pedido.HeaderText = "Pedido"
+        Me.pedido.Name = "pedido"
+        '
+        'rua
+        '
+        Me.rua.HeaderText = "Rua"
+        Me.rua.Name = "rua"
+        '
+        'numero
+        '
+        Me.numero.HeaderText = "Número"
+        Me.numero.Name = "numero"
+        '
+        'comp
+        '
+        Me.comp.HeaderText = "Complemento"
+        Me.comp.Name = "comp"
+        '
+        'bairro
+        '
+        Me.bairro.HeaderText = "Bairro"
+        Me.bairro.Name = "bairro"
+        '
+        'cidade
+        '
+        Me.cidade.HeaderText = "Cidade"
+        Me.cidade.Name = "cidade"
+        '
+        'estado
+        '
+        Me.estado.HeaderText = "Estado"
+        Me.estado.Name = "estado"
+        '
+        'nome
+        '
+        Me.nome.HeaderText = "Nome"
+        Me.nome.Name = "nome"
+        '
+        'entregar
+        '
+        Me.entregar.HeaderText = "Entregar"
+        Me.entregar.Image = CType(resources.GetObject("entregar.Image"), System.Drawing.Image)
+        Me.entregar.Name = "entregar"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(906, 24)
+        Me.MenuStrip1.TabIndex = 21
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'EncerrarToolStripMenuItem
+        '
+        Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
+        Me.EncerrarToolStripMenuItem.Name = "EncerrarToolStripMenuItem"
+        Me.EncerrarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.EncerrarToolStripMenuItem.Text = "Encerrar"
+        '
+        'EncerrarSessãoToolStripMenuItem
+        '
+        Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
+        Me.EncerrarSessãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar Sessão"
+        '
+        'EncerrarSistemaToolStripMenuItem
+        '
+        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
+        Me.EncerrarSistemaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
         '
         'frm_entregador
         '
@@ -41,15 +142,34 @@ Partial Class frm_entregador
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(906, 487)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frm_entregador"
         Me.Text = "Entregador"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents numpedido As DataGridViewTextBoxColumn
+    Friend WithEvents pedido As DataGridViewTextBoxColumn
+    Friend WithEvents rua As DataGridViewTextBoxColumn
+    Friend WithEvents numero As DataGridViewTextBoxColumn
+    Friend WithEvents comp As DataGridViewTextBoxColumn
+    Friend WithEvents bairro As DataGridViewTextBoxColumn
+    Friend WithEvents cidade As DataGridViewTextBoxColumn
+    Friend WithEvents estado As DataGridViewTextBoxColumn
+    Friend WithEvents nome As DataGridViewTextBoxColumn
+    Friend WithEvents entregar As DataGridViewImageColumn
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents EncerrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSessãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
 End Class

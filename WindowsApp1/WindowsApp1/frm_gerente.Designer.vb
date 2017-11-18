@@ -37,12 +37,19 @@ Partial Class frm_gerente
         Me.EntrarComoPizzaioloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntregadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntrarComoEntregadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncessarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastrarNovoUsuárioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GerenciarUsuáriosExistentesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdcionarNovosSaboresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaDeSaboresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GerênciaToolStripMenuItem, Me.VendedorToolStripMenuItem, Me.PizzaioloToolStripMenuItem, Me.EntregadorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GerênciaToolStripMenuItem, Me.VendedorToolStripMenuItem, Me.PizzaioloToolStripMenuItem, Me.EntregadorToolStripMenuItem, Me.EncerrarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(919, 24)
@@ -66,24 +73,28 @@ Partial Class frm_gerente
         '
         'DiárioToolStripMenuItem
         '
+        Me.DiárioToolStripMenuItem.Image = CType(resources.GetObject("DiárioToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DiárioToolStripMenuItem.Name = "DiárioToolStripMenuItem"
         Me.DiárioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DiárioToolStripMenuItem.Text = "Diário"
         '
         'MensalToolStripMenuItem
         '
+        Me.MensalToolStripMenuItem.Image = CType(resources.GetObject("MensalToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MensalToolStripMenuItem.Name = "MensalToolStripMenuItem"
         Me.MensalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MensalToolStripMenuItem.Text = "Mensal"
         '
         'AnualToolStripMenuItem
         '
+        Me.AnualToolStripMenuItem.Image = CType(resources.GetObject("AnualToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AnualToolStripMenuItem.Name = "AnualToolStripMenuItem"
         Me.AnualToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AnualToolStripMenuItem.Text = "Anual"
         '
         'CardápioDePizzasToolStripMenuItem
         '
+        Me.CardápioDePizzasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdcionarNovosSaboresToolStripMenuItem, Me.ListaDeSaboresToolStripMenuItem})
         Me.CardápioDePizzasToolStripMenuItem.Image = CType(resources.GetObject("CardápioDePizzasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CardápioDePizzasToolStripMenuItem.Name = "CardápioDePizzasToolStripMenuItem"
         Me.CardápioDePizzasToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
@@ -91,6 +102,7 @@ Partial Class frm_gerente
         '
         'FuncionáriosToolStripMenuItem
         '
+        Me.FuncionáriosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarNovoUsuárioToolStripMenuItem, Me.GerenciarUsuáriosExistentesToolStripMenuItem})
         Me.FuncionáriosToolStripMenuItem.Image = CType(resources.GetObject("FuncionáriosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.FuncionáriosToolStripMenuItem.Name = "FuncionáriosToolStripMenuItem"
         Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
@@ -138,6 +150,57 @@ Partial Class frm_gerente
         Me.EntrarComoEntregadorToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.EntrarComoEntregadorToolStripMenuItem.Text = "Entrar Como Entregador"
         '
+        'EncerrarToolStripMenuItem
+        '
+        Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncessarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
+        Me.EncerrarToolStripMenuItem.Name = "EncerrarToolStripMenuItem"
+        Me.EncerrarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.EncerrarToolStripMenuItem.Text = "Encerrar"
+        '
+        'EncessarSessãoToolStripMenuItem
+        '
+        Me.EncessarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncessarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncessarSessãoToolStripMenuItem.Name = "EncessarSessãoToolStripMenuItem"
+        Me.EncessarSessãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.EncessarSessãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncessarSessãoToolStripMenuItem.Text = "Encessar Sessão"
+        '
+        'EncerrarSistemaToolStripMenuItem
+        '
+        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
+        Me.EncerrarSistemaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
+        '
+        'CadastrarNovoUsuárioToolStripMenuItem
+        '
+        Me.CadastrarNovoUsuárioToolStripMenuItem.Image = CType(resources.GetObject("CadastrarNovoUsuárioToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CadastrarNovoUsuárioToolStripMenuItem.Name = "CadastrarNovoUsuárioToolStripMenuItem"
+        Me.CadastrarNovoUsuárioToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.CadastrarNovoUsuárioToolStripMenuItem.Text = "Cadastrar Novo Usuário"
+        '
+        'GerenciarUsuáriosExistentesToolStripMenuItem
+        '
+        Me.GerenciarUsuáriosExistentesToolStripMenuItem.Image = CType(resources.GetObject("GerenciarUsuáriosExistentesToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.GerenciarUsuáriosExistentesToolStripMenuItem.Name = "GerenciarUsuáriosExistentesToolStripMenuItem"
+        Me.GerenciarUsuáriosExistentesToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.GerenciarUsuáriosExistentesToolStripMenuItem.Text = "Gerenciar Usuários Existentes"
+        '
+        'AdcionarNovosSaboresToolStripMenuItem
+        '
+        Me.AdcionarNovosSaboresToolStripMenuItem.Image = CType(resources.GetObject("AdcionarNovosSaboresToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AdcionarNovosSaboresToolStripMenuItem.Name = "AdcionarNovosSaboresToolStripMenuItem"
+        Me.AdcionarNovosSaboresToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.AdcionarNovosSaboresToolStripMenuItem.Text = "Adicionar Novos Sabores"
+        '
+        'ListaDeSaboresToolStripMenuItem
+        '
+        Me.ListaDeSaboresToolStripMenuItem.Image = CType(resources.GetObject("ListaDeSaboresToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ListaDeSaboresToolStripMenuItem.Name = "ListaDeSaboresToolStripMenuItem"
+        Me.ListaDeSaboresToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ListaDeSaboresToolStripMenuItem.Text = "Lista de Sabores"
+        '
         'frm_gerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,4 +235,11 @@ Partial Class frm_gerente
     Friend WithEvents EntrarComoVendedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EntrarComoPizzaioloToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EntrarComoEntregadorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncessarSessãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdcionarNovosSaboresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaDeSaboresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastrarNovoUsuárioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GerenciarUsuáriosExistentesToolStripMenuItem As ToolStripMenuItem
 End Class

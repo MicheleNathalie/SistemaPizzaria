@@ -49,8 +49,14 @@ Partial Class frm_pedidos
         Me.clb_sabores = New System.Windows.Forms.CheckedListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -76,7 +82,7 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.cmb_quantidade)
         Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Tomato
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 38)
+        Me.GroupBox1.Location = New System.Drawing.Point(46, 64)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(831, 428)
         Me.GroupBox1.TabIndex = 0
@@ -186,7 +192,7 @@ Partial Class frm_pedidos
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.observacao, Me.Excluir})
-        Me.DataGridView1.Location = New System.Drawing.Point(407, 62)
+        Me.DataGridView1.Location = New System.Drawing.Point(405, 63)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
         Me.DataGridView1.TabIndex = 8
@@ -309,13 +315,65 @@ Partial Class frm_pedidos
         Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
         Me.cmb_quantidade.TabIndex = 0
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(921, 24)
+        Me.MenuStrip1.TabIndex = 21
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'EncerrarToolStripMenuItem
+        '
+        Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
+        Me.EncerrarToolStripMenuItem.Name = "EncerrarToolStripMenuItem"
+        Me.EncerrarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.EncerrarToolStripMenuItem.Text = "Encerrar"
+        '
+        'EncerrarSessãoToolStripMenuItem
+        '
+        Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
+        Me.EncerrarSessãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar Sessão"
+        '
+        'EncerrarSistemaToolStripMenuItem
+        '
+        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
+        Me.EncerrarSistemaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
+        '
+        'btn_cancelar
+        '
+        Me.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelar.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelar.ForeColor = System.Drawing.Color.Coral
+        Me.btn_cancelar.Image = CType(resources.GetObject("btn_cancelar.Image"), System.Drawing.Image)
+        Me.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_cancelar.Location = New System.Drawing.Point(46, 498)
+        Me.btn_cancelar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(128, 39)
+        Me.btn_cancelar.TabIndex = 22
+        Me.btn_cancelar.Text = "Cancelar"
+        Me.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_cancelar.UseVisualStyleBackColor = True
+        '
         'frm_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(915, 517)
+        Me.ClientSize = New System.Drawing.Size(921, 557)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_pedidos"
@@ -324,7 +382,10 @@ Partial Class frm_pedidos
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -354,4 +415,9 @@ Partial Class frm_pedidos
     Friend WithEvents Valor As DataGridViewTextBoxColumn
     Friend WithEvents observacao As DataGridViewTextBoxColumn
     Friend WithEvents Excluir As DataGridViewImageColumn
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents EncerrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSessãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_cancelar As Button
 End Class

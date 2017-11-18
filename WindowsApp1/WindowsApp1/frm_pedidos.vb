@@ -75,6 +75,12 @@
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
+    Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
+        Me.Close()
+        frm_login.ShowDialog()
+    End Sub
+
     Sub Verifica_Pedido()
         sql = "select * from tb_pedidos"
         rs = db.Execute(sql)
@@ -86,4 +92,10 @@
             numero_pedido = rs.Fields(1).Value + 1
         End If
     End Sub
+
+
+    Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
 End Class

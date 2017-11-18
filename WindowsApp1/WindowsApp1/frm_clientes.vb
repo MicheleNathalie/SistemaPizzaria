@@ -1,16 +1,5 @@
 ﻿Public Class frm_clientes
     Dim verifica_cliente As Integer
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        txt_telres.Text = "(11)"
-        txt_cidade.Clear()
-        txt_bairro.Clear()
-        txt_comp.Clear()
-        txt_estado.Text = "SP"
-        txt_referencia.Clear()
-        txt_rua.Clear()
-
-    End Sub
-
     Private Sub btn_seguir_Click(sender As Object, e As EventArgs) Handles btn_seguir.Click
         Try
 
@@ -23,13 +12,20 @@
                         "" & txt_numero.Text & ",'" & txt_bairro.Text & "','" & txt_comp.Text & "','" & txt_referencia.Text & "'," &
                         "'" & txt_cidade.Text & "','" & txt_estado.Text & "')"
                     rs = db.Execute(sql)
-                    MsgBox("Novo cliente cadastrado!!")
+                    MsgBox("Novo cliente cadastrado.", vbInformation + vbOKOnly, "Sucesso")
                 End If
+                txt_telres.Text = "(11)"
+                txt_cidade.Clear()
+                txt_bairro.Clear()
+                txt_comp.Clear()
+                txt_estado.Text = "SP"
+                txt_referencia.Clear()
+                txt_rua.Clear()
                 Me.Close()
                 frm_pedidos.ShowDialog()
             End If
         Catch ex As Exception
-            MsgBox("ERRO!!")
+            MsgBox("Erro!", vbExclamation + vbOKOnly)
         End Try
     End Sub
 
@@ -63,5 +59,28 @@
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_nome.TextChanged
 
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
+        Me.Close()
+        frm_login.ShowDialog()
+    End Sub
+
+    Private Sub btn_limp_Click(sender As Object, e As EventArgs) Handles btn_limp.Click
+        txt_telres.Text = "(11)"
+        txt_cidade.Clear()
+        txt_bairro.Clear()
+        txt_comp.Clear()
+        txt_estado.Text = "SP"
+        txt_referencia.Clear()
+        txt_rua.Clear()
     End Sub
 End Class

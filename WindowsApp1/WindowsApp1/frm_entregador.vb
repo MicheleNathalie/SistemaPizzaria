@@ -1,8 +1,14 @@
 ﻿Public Class frm_entregador
     Private Sub frm_entregador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim privateFonts As New System.Drawing.Text.PrivateFontCollection()
-        privateFonts.AddFontFile(Application.StartupPath & "\Fontes\Moon Flower Bold.ttf")
-        Dim font As New System.Drawing.Font(privateFonts.Families(0), 22)
-        ListView1.Font = font
+
+    End Sub
+
+    Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
+        Me.Close()
+        frm_login.ShowDialog()
+    End Sub
+
+    Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
+        Application.Exit()
     End Sub
 End Class

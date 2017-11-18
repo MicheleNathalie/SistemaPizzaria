@@ -39,7 +39,7 @@
                             End If
 
                         Else
-                            MsgBox("Usuário correto e senha  errada")
+                            MsgBox("Senha incorreta", vbExclamation + vbOKOnly, "Erro")
                             txt_senha.Focus()
                         End If
                     Else
@@ -49,8 +49,12 @@
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Erro!!")
+            MsgBox("Erro!", vbExclamation + vbOKOnly)
         End Try
+
+        txt_cpf.Clear()
+        txt_senha.Clear()
+
     End Sub
 
     Private Sub frm_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

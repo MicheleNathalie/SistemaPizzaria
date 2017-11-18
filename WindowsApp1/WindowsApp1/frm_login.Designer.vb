@@ -114,16 +114,16 @@ Partial Class frm_login
         Me.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_entrar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray
         Me.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_entrar.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_entrar.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_entrar.ForeColor = System.Drawing.Color.Tomato
         Me.btn_entrar.Image = CType(resources.GetObject("btn_entrar.Image"), System.Drawing.Image)
-        Me.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_entrar.Location = New System.Drawing.Point(466, 331)
+        Me.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_entrar.Location = New System.Drawing.Point(472, 331)
         Me.btn_entrar.Name = "btn_entrar"
-        Me.btn_entrar.Size = New System.Drawing.Size(111, 36)
+        Me.btn_entrar.Size = New System.Drawing.Size(105, 42)
         Me.btn_entrar.TabIndex = 6
         Me.btn_entrar.Text = "Entrar"
-        Me.btn_entrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_entrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_entrar.UseVisualStyleBackColor = False
         '
         'frm_login
