@@ -63,7 +63,7 @@
         End If
     End Sub
 
-    Private Sub clb_sabores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles clb_sabores.SelectedIndexChanged
+    Private Sub clb_sabores_SelectedIndexChanged(sender As Object, e As EventArgs) 
         MsgBox("sabor= " & clb_sabores.SelectedIndex)
 
     End Sub

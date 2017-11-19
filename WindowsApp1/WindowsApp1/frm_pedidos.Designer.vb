@@ -46,7 +46,6 @@ Partial Class frm_pedidos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.clb_sabores = New System.Windows.Forms.CheckedListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -54,6 +53,8 @@ Partial Class frm_pedidos
         Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.cmb_sabores = New System.Windows.Forms.ComboBox()
+        Me.cmb_sabores2 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -63,6 +64,9 @@ Partial Class frm_pedidos
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.cmb_sabores2)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.cmb_sabores)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txt_obs)
         Me.GroupBox1.Controls.Add(Me.cb_borda)
@@ -72,14 +76,12 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.btn_confirmar)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt_valor)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.txt_entrega)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.cmb_tamanho)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.clb_sabores)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cmb_quantidade)
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Tomato
         Me.GroupBox1.Location = New System.Drawing.Point(46, 64)
@@ -91,7 +93,7 @@ Partial Class frm_pedidos
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 323)
+        Me.Label5.Location = New System.Drawing.Point(372, 40)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(115, 30)
         Me.Label5.TabIndex = 16
@@ -100,17 +102,17 @@ Partial Class frm_pedidos
         'txt_obs
         '
         Me.txt_obs.Font = New System.Drawing.Font("Moon Flower Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_obs.Location = New System.Drawing.Point(25, 347)
+        Me.txt_obs.Location = New System.Drawing.Point(377, 68)
         Me.txt_obs.Multiline = True
         Me.txt_obs.Name = "txt_obs"
-        Me.txt_obs.Size = New System.Drawing.Size(149, 58)
+        Me.txt_obs.Size = New System.Drawing.Size(163, 58)
         Me.txt_obs.TabIndex = 15
         '
         'cb_borda
         '
         Me.cb_borda.AutoSize = True
         Me.cb_borda.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cb_borda.Location = New System.Drawing.Point(18, 247)
+        Me.cb_borda.Location = New System.Drawing.Point(208, 39)
         Me.cb_borda.Name = "cb_borda"
         Me.cb_borda.Size = New System.Drawing.Size(76, 34)
         Me.cb_borda.TabIndex = 13
@@ -121,16 +123,16 @@ Partial Class frm_pedidos
         '
         Me.cmb_borda.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmb_borda.FormattingEnabled = True
-        Me.cmb_borda.Location = New System.Drawing.Point(25, 273)
+        Me.cmb_borda.Location = New System.Drawing.Point(208, 68)
         Me.cmb_borda.Name = "cmb_borda"
-        Me.cmb_borda.Size = New System.Drawing.Size(149, 38)
+        Me.cmb_borda.Size = New System.Drawing.Size(163, 38)
         Me.cmb_borda.TabIndex = 14
         '
         'cb_entrega
         '
         Me.cb_entrega.AutoSize = True
         Me.cb_entrega.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cb_entrega.Location = New System.Drawing.Point(18, 175)
+        Me.cb_entrega.Location = New System.Drawing.Point(617, 35)
         Me.cb_entrega.Name = "cb_entrega"
         Me.cb_entrega.Size = New System.Drawing.Size(95, 34)
         Me.cb_entrega.TabIndex = 6
@@ -145,7 +147,7 @@ Partial Class frm_pedidos
         Me.btn_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_ok.ForeColor = System.Drawing.Color.SandyBrown
         Me.btn_ok.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_ok.Location = New System.Drawing.Point(358, 383)
+        Me.btn_ok.Location = New System.Drawing.Point(546, 100)
         Me.btn_ok.Name = "btn_ok"
         Me.btn_ok.Size = New System.Drawing.Size(43, 39)
         Me.btn_ok.TabIndex = 12
@@ -161,7 +163,7 @@ Partial Class frm_pedidos
         Me.btn_confirmar.ForeColor = System.Drawing.Color.SandyBrown
         Me.btn_confirmar.Image = CType(resources.GetObject("btn_confirmar.Image"), System.Drawing.Image)
         Me.btn_confirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_confirmar.Location = New System.Drawing.Point(624, 363)
+        Me.btn_confirmar.Location = New System.Drawing.Point(643, 383)
         Me.btn_confirmar.Name = "btn_confirmar"
         Me.btn_confirmar.Size = New System.Drawing.Size(182, 39)
         Me.btn_confirmar.TabIndex = 11
@@ -172,7 +174,7 @@ Partial Class frm_pedidos
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(442, 341)
+        Me.Label4.Location = New System.Drawing.Point(612, 108)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(117, 30)
         Me.Label4.TabIndex = 10
@@ -180,9 +182,9 @@ Partial Class frm_pedidos
         '
         'txt_valor
         '
-        Me.txt_valor.Location = New System.Drawing.Point(466, 364)
+        Me.txt_valor.Location = New System.Drawing.Point(617, 131)
         Me.txt_valor.Name = "txt_valor"
-        Me.txt_valor.Size = New System.Drawing.Size(106, 41)
+        Me.txt_valor.Size = New System.Drawing.Size(149, 41)
         Me.txt_valor.TabIndex = 9
         Me.txt_valor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -192,9 +194,9 @@ Partial Class frm_pedidos
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.observacao, Me.Excluir})
-        Me.DataGridView1.Location = New System.Drawing.Point(405, 63)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 186)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(401, 276)
+        Me.DataGridView1.Size = New System.Drawing.Size(768, 191)
         Me.DataGridView1.TabIndex = 8
         '
         'num
@@ -254,7 +256,7 @@ Partial Class frm_pedidos
         '
         'txt_entrega
         '
-        Me.txt_entrega.Location = New System.Drawing.Point(25, 200)
+        Me.txt_entrega.Location = New System.Drawing.Point(617, 64)
         Me.txt_entrega.Name = "txt_entrega"
         Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
         Me.txt_entrega.TabIndex = 7
@@ -263,7 +265,7 @@ Partial Class frm_pedidos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 107)
+        Me.Label3.Location = New System.Drawing.Point(41, 113)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 30)
         Me.Label3.TabIndex = 5
@@ -273,7 +275,7 @@ Partial Class frm_pedidos
         '
         Me.cmb_tamanho.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmb_tamanho.FormattingEnabled = True
-        Me.cmb_tamanho.Location = New System.Drawing.Point(25, 129)
+        Me.cmb_tamanho.Location = New System.Drawing.Point(53, 135)
         Me.cmb_tamanho.Name = "cmb_tamanho"
         Me.cmb_tamanho.Size = New System.Drawing.Size(149, 38)
         Me.cmb_tamanho.TabIndex = 4
@@ -281,26 +283,16 @@ Partial Class frm_pedidos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(177, 35)
+        Me.Label2.Location = New System.Drawing.Point(204, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 30)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Sabores:"
         '
-        'clb_sabores
-        '
-        Me.clb_sabores.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.clb_sabores.Font = New System.Drawing.Font("Moon Flower", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clb_sabores.FormattingEnabled = True
-        Me.clb_sabores.Location = New System.Drawing.Point(191, 63)
-        Me.clb_sabores.Name = "clb_sabores"
-        Me.clb_sabores.Size = New System.Drawing.Size(196, 328)
-        Me.clb_sabores.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 40)
+        Me.Label1.Location = New System.Drawing.Point(41, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 30)
         Me.Label1.TabIndex = 1
@@ -310,7 +302,7 @@ Partial Class frm_pedidos
         '
         Me.cmb_quantidade.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmb_quantidade.FormattingEnabled = True
-        Me.cmb_quantidade.Location = New System.Drawing.Point(25, 63)
+        Me.cmb_quantidade.Location = New System.Drawing.Point(53, 67)
         Me.cmb_quantidade.Name = "cmb_quantidade"
         Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
         Me.cmb_quantidade.TabIndex = 0
@@ -365,6 +357,22 @@ Partial Class frm_pedidos
         Me.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
+        'cmb_sabores
+        '
+        Me.cmb_sabores.FormattingEnabled = True
+        Me.cmb_sabores.Location = New System.Drawing.Point(208, 135)
+        Me.cmb_sabores.Name = "cmb_sabores"
+        Me.cmb_sabores.Size = New System.Drawing.Size(163, 38)
+        Me.cmb_sabores.TabIndex = 17
+        '
+        'cmb_sabores2
+        '
+        Me.cmb_sabores2.FormattingEnabled = True
+        Me.cmb_sabores2.Location = New System.Drawing.Point(377, 135)
+        Me.cmb_sabores2.Name = "cmb_sabores2"
+        Me.cmb_sabores2.Size = New System.Drawing.Size(163, 38)
+        Me.cmb_sabores2.TabIndex = 18
+        '
         'frm_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -390,7 +398,6 @@ Partial Class frm_pedidos
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents clb_sabores As CheckedListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_quantidade As ComboBox
     Friend WithEvents Label3 As Label
@@ -420,4 +427,6 @@ Partial Class frm_pedidos
     Friend WithEvents EncerrarSessãoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btn_cancelar As Button
+    Friend WithEvents cmb_sabores2 As ComboBox
+    Friend WithEvents cmb_sabores As ComboBox
 End Class
