@@ -1,7 +1,9 @@
 ﻿Public Class frm_pedidos
     Dim valor_pizza, valor_total As Double
     Dim verifica_meia, verifica_sabores, numero_pedido As Integer
+    Dim sabor_pizza As String
     Private Sub frm_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conecta_banco()
         Verifica_Pedido()
         verifica_meia = 0
         verifica_sabores = 0
@@ -64,7 +66,7 @@
     End Sub
 
     Private Sub clb_sabores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles clb_sabores.SelectedIndexChanged
-        MsgBox("sabor= " & clb_sabores.SelectedIndex)
+
 
     End Sub
 
@@ -73,6 +75,10 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub btn_confirmar_Click(sender As Object, e As EventArgs) Handles btn_confirmar.Click
 
     End Sub
 
@@ -98,4 +104,9 @@
         Application.Exit()
     End Sub
 
+    Private Sub clb_sabores_SelectedValueChanged(sender As Object, e As EventArgs) Handles clb_sabores.SelectedValueChanged
+        sabor_pizza = clb_sabores.SelectedItem & "e" & sabor_pizza
+        MsgBox("sabor= " & sabor_pizza)
+
+    End Sub
 End Class
