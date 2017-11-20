@@ -24,6 +24,9 @@ Partial Class frm_pedidos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pedidos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmb_sabores2 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmb_sabores = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_obs = New System.Windows.Forms.TextBox()
         Me.cb_borda = New System.Windows.Forms.CheckBox()
@@ -33,6 +36,11 @@ Partial Class frm_pedidos
         Me.btn_confirmar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_valor = New System.Windows.Forms.TextBox()
+        Me.txt_entrega = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.num = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,19 +50,11 @@ Partial Class frm_pedidos
         Me.Valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.observacao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Excluir = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.txt_entrega = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cmb_tamanho = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmb_quantidade = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_cancelar = New System.Windows.Forms.Button()
-        Me.cmb_sabores = New System.Windows.Forms.ComboBox()
-        Me.cmb_sabores2 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -84,11 +84,36 @@ Partial Class frm_pedidos
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Tomato
-        Me.GroupBox1.Location = New System.Drawing.Point(46, 64)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 64)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(831, 428)
+        Me.GroupBox1.Size = New System.Drawing.Size(921, 428)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'cmb_sabores2
+        '
+        Me.cmb_sabores2.FormattingEnabled = True
+        Me.cmb_sabores2.Location = New System.Drawing.Point(377, 135)
+        Me.cmb_sabores2.Name = "cmb_sabores2"
+        Me.cmb_sabores2.Size = New System.Drawing.Size(163, 38)
+        Me.cmb_sabores2.TabIndex = 18
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(204, 109)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 30)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Sabores:"
+        '
+        'cmb_sabores
+        '
+        Me.cmb_sabores.FormattingEnabled = True
+        Me.cmb_sabores.Location = New System.Drawing.Point(208, 135)
+        Me.cmb_sabores.Name = "cmb_sabores"
+        Me.cmb_sabores.Size = New System.Drawing.Size(163, 38)
+        Me.cmb_sabores.TabIndex = 17
         '
         'Label5
         '
@@ -163,7 +188,7 @@ Partial Class frm_pedidos
         Me.btn_confirmar.ForeColor = System.Drawing.Color.SandyBrown
         Me.btn_confirmar.Image = CType(resources.GetObject("btn_confirmar.Image"), System.Drawing.Image)
         Me.btn_confirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_confirmar.Location = New System.Drawing.Point(643, 383)
+        Me.btn_confirmar.Location = New System.Drawing.Point(739, 383)
         Me.btn_confirmar.Name = "btn_confirmar"
         Me.btn_confirmar.Size = New System.Drawing.Size(182, 39)
         Me.btn_confirmar.TabIndex = 11
@@ -188,15 +213,59 @@ Partial Class frm_pedidos
         Me.txt_valor.TabIndex = 9
         Me.txt_valor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'txt_entrega
+        '
+        Me.txt_entrega.Location = New System.Drawing.Point(617, 64)
+        Me.txt_entrega.Name = "txt_entrega"
+        Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
+        Me.txt_entrega.TabIndex = 7
+        Me.txt_entrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(41, 113)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 30)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Tamanho:"
+        '
+        'cmb_tamanho
+        '
+        Me.cmb_tamanho.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_tamanho.FormattingEnabled = True
+        Me.cmb_tamanho.Location = New System.Drawing.Point(53, 135)
+        Me.cmb_tamanho.Name = "cmb_tamanho"
+        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 38)
+        Me.cmb_tamanho.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(41, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(112, 30)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Quantidade:"
+        '
+        'cmb_quantidade
+        '
+        Me.cmb_quantidade.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_quantidade.FormattingEnabled = True
+        Me.cmb_quantidade.Location = New System.Drawing.Point(53, 67)
+        Me.cmb_quantidade.Name = "cmb_quantidade"
+        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
+        Me.cmb_quantidade.TabIndex = 0
+        '
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.num, Me.Quantidade, Me.Tamanho, Me.Sabor, Me.Borda, Me.Valor, Me.observacao, Me.Excluir})
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 186)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 186)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(768, 191)
+        Me.DataGridView1.Size = New System.Drawing.Size(921, 191)
         Me.DataGridView1.TabIndex = 8
         '
         'num
@@ -254,59 +323,6 @@ Partial Class frm_pedidos
         Me.Excluir.Name = "Excluir"
         Me.Excluir.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
-        'txt_entrega
-        '
-        Me.txt_entrega.Location = New System.Drawing.Point(617, 64)
-        Me.txt_entrega.Name = "txt_entrega"
-        Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
-        Me.txt_entrega.TabIndex = 7
-        Me.txt_entrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(41, 113)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 30)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Tamanho:"
-        '
-        'cmb_tamanho
-        '
-        Me.cmb_tamanho.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmb_tamanho.FormattingEnabled = True
-        Me.cmb_tamanho.Location = New System.Drawing.Point(53, 135)
-        Me.cmb_tamanho.Name = "cmb_tamanho"
-        Me.cmb_tamanho.Size = New System.Drawing.Size(149, 38)
-        Me.cmb_tamanho.TabIndex = 4
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(204, 109)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 30)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Sabores:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(41, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 30)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Quantidade:"
-        '
-        'cmb_quantidade
-        '
-        Me.cmb_quantidade.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmb_quantidade.FormattingEnabled = True
-        Me.cmb_quantidade.Location = New System.Drawing.Point(53, 67)
-        Me.cmb_quantidade.Name = "cmb_quantidade"
-        Me.cmb_quantidade.Size = New System.Drawing.Size(149, 38)
-        Me.cmb_quantidade.TabIndex = 0
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarToolStripMenuItem})
@@ -356,22 +372,6 @@ Partial Class frm_pedidos
         Me.btn_cancelar.Text = "Cancelar"
         Me.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_cancelar.UseVisualStyleBackColor = True
-        '
-        'cmb_sabores
-        '
-        Me.cmb_sabores.FormattingEnabled = True
-        Me.cmb_sabores.Location = New System.Drawing.Point(208, 135)
-        Me.cmb_sabores.Name = "cmb_sabores"
-        Me.cmb_sabores.Size = New System.Drawing.Size(163, 38)
-        Me.cmb_sabores.TabIndex = 17
-        '
-        'cmb_sabores2
-        '
-        Me.cmb_sabores2.FormattingEnabled = True
-        Me.cmb_sabores2.Location = New System.Drawing.Point(377, 135)
-        Me.cmb_sabores2.Name = "cmb_sabores2"
-        Me.cmb_sabores2.Size = New System.Drawing.Size(163, 38)
-        Me.cmb_sabores2.TabIndex = 18
         '
         'frm_pedidos
         '

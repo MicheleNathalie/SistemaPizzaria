@@ -4,7 +4,7 @@
     Public sql, diretorio, tipo As String
     Public conexao = Application.StartupPath & "\cadastro.mdb"
     Public cont As Long
-    Public aux, resp, nivel As String
+    Public aux, resp, nivel, nome_cliente, numero_cliente, complemento_cliente, referencia_cliente, cidade_cliente, estado_cliente, rua_cliente, bairro_cliente As String
 
 
     Sub conecta_banco()
@@ -32,7 +32,6 @@
         End With
         With frm_pedidos
             .txt_entrega.Clear()
-            .clb_sabores.ClearSelected()
             .cb_entrega.Checked = False
             .txt_valor.Clear()
             .cmb_quantidade.Text = ""

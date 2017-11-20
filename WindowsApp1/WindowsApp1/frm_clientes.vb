@@ -1,6 +1,14 @@
 ﻿Public Class frm_clientes
     Dim verifica_cliente As Integer
     Private Sub btn_seguir_Click(sender As Object, e As EventArgs) Handles btn_seguir.Click
+        numero_cliente = txt_numero.Text
+        bairro_cliente = txt_bairro.Text
+        cidade_cliente = txt_cidade.Text
+        complemento_cliente = txt_comp.Text
+        referencia_cliente = txt_referencia.Text
+        estado_cliente = txt_estado.Text
+        nome_cliente = txt_nome.Text
+        rua_cliente = txt_rua.Text
         Try
 
 
