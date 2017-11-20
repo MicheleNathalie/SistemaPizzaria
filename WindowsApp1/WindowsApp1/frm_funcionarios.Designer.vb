@@ -42,7 +42,7 @@ Partial Class frm_funcionarios
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cpf, Me.nome, Me.cargo, Me.senha, Me.admissao, Me.demissao, Me.editar, Me.bloquear, Me.demitir})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(872, 451)
+        Me.DataGridView1.Size = New System.Drawing.Size(882, 451)
         Me.DataGridView1.TabIndex = 0
         '
         'cpf

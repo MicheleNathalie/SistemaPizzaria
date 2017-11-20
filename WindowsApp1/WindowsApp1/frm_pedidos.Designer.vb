@@ -55,6 +55,8 @@ Partial Class frm_pedidos
         Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txt_obs_motoboy = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -64,6 +66,8 @@ Partial Class frm_pedidos
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.txt_obs_motoboy)
         Me.GroupBox1.Controls.Add(Me.cmb_sabores2)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmb_sabores)
@@ -373,6 +377,24 @@ Partial Class frm_pedidos
         Me.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(12, 383)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(244, 30)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Observações para o motoboy:"
+        '
+        'txt_obs_motoboy
+        '
+        Me.txt_obs_motoboy.Font = New System.Drawing.Font("Moon Flower Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_obs_motoboy.Location = New System.Drawing.Point(277, 383)
+        Me.txt_obs_motoboy.Multiline = True
+        Me.txt_obs_motoboy.Name = "txt_obs_motoboy"
+        Me.txt_obs_motoboy.Size = New System.Drawing.Size(345, 30)
+        Me.txt_obs_motoboy.TabIndex = 19
+        '
         'frm_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -429,4 +451,6 @@ Partial Class frm_pedidos
     Friend WithEvents btn_cancelar As Button
     Friend WithEvents cmb_sabores2 As ComboBox
     Friend WithEvents cmb_sabores As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txt_obs_motoboy As TextBox
 End Class

@@ -30,7 +30,7 @@ Partial Class frm_pizzaiolo
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.numpedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fazendo = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.feito = New System.Windows.Forms.DataGridViewImageColumn()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +73,7 @@ Partial Class frm_pizzaiolo
         Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.pedido, Me.fazendo, Me.feito})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.pedido, Me.Column2, Me.feito})
         Me.DataGridView1.Location = New System.Drawing.Point(81, 51)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(725, 383)
@@ -89,11 +89,10 @@ Partial Class frm_pizzaiolo
         Me.pedido.HeaderText = "Pedido"
         Me.pedido.Name = "pedido"
         '
-        'fazendo
+        'Column2
         '
-        Me.fazendo.HeaderText = "Fazendo"
-        Me.fazendo.Image = CType(resources.GetObject("fazendo.Image"), System.Drawing.Image)
-        Me.fazendo.Name = "fazendo"
+        Me.Column2.HeaderText = "Entrega"
+        Me.Column2.Name = "Column2"
         '
         'feito
         '
@@ -129,6 +128,6 @@ Partial Class frm_pizzaiolo
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents numpedido As DataGridViewTextBoxColumn
     Friend WithEvents pedido As DataGridViewTextBoxColumn
-    Friend WithEvents fazendo As DataGridViewImageColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents feito As DataGridViewImageColumn
 End Class

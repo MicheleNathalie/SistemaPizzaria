@@ -1,7 +1,7 @@
 ﻿Public Class frm_pedidos
     Dim valor_pizza, valor_total As Double
     Dim verifica_meia, numero_pedido, i As Integer
-    Dim sabor_pizza As String
+    Dim sabor_pizza, pedido As String
     Private Sub frm_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_entrega.Text = "Não"
         conecta_banco()
@@ -85,7 +85,16 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
+        With DataGridView1
+            If .CurrentRow.Cells(7).Selected = True Then
+                resp = MsgBox("Deseja mesmo excluir essa linha?", MessageBoxButtons.YesNo)
+                If resp = vbYes Then
+                    valor_total = valor_total - .CurrentRow.Cells(5).Value
+                    txt_valor.Text = valor_total
+                    .Rows.RemoveAt(.CurrentRow.Index)
+                End If
+            End If
+        End With
     End Sub
 
     Private Sub btn_ok_Click(sender As Object, e As EventArgs) Handles btn_ok.Click
@@ -132,13 +141,19 @@
         If resp = vbYes Then
             i = 0
             While i < DataGridView1.RowCount - 1
-                sql = "insert into tb_pedidos (numero_pedido,quantidade,tamanho,sabor,borda,observacao,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega)  values(" & numero_pedido & " , '" & DataGridView1.Rows(i).Cells(1).Value & "' , '" & DataGridView1.Rows(i).Cells(2).Value & "' , '" & DataGridView1.Rows(i).Cells(3).Value & "' , '" & DataGridView1.Rows(i).Cells(4).Value & "' , '" & DataGridView1.Rows(i).Cells(6).Value & "' , '" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "')"
-                rs = db.Execute(sql)
+                pedido = pedido & DataGridView1.Rows(i).Cells(1).Value & " " & DataGridView1.Rows(i).Cells(2).Value & " " & DataGridView1.Rows(i).Cells(3).Value & "borda de" & DataGridView1.Rows(i).Cells(4).Value & " " & DataGridView1.Rows(i).Cells(6).Value & ". "
                 i = i + 1
             End While
+            sql = "insert into tb_pedidos (numero_pedido,pedido,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega,status,observacao_motoboy)  values(" & numero_pedido & " , '" & pedido & "' , '" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "','Fazendo','" & txt_obs_motoboy.Text & "')"
+            rs = db.Execute(sql)
+            i = i + 1
             MsgBox("pedido feito com sucesso!!!")
             DataGridView1.Rows.Clear()
             limpar()
+            pedido = Nothing
+            With frm_pizzaiolo
+                .atualiza()
+            End With
             Verifica_Pedido()
         End If
     End Sub

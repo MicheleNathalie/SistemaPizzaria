@@ -24,8 +24,11 @@ Partial Class frm_entregador
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_entregador))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.numpedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rua = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.comp = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,10 +37,6 @@ Partial Class frm_entregador
         Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.entregar = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,21 +46,48 @@ Partial Class frm_entregador
         Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.pedido, Me.rua, Me.numero, Me.comp, Me.bairro, Me.cidade, Me.estado, Me.nome, Me.entregar})
-        Me.DataGridView1.Location = New System.Drawing.Point(92, 61)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.rua, Me.numero, Me.comp, Me.bairro, Me.cidade, Me.estado, Me.nome, Me.entregar})
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 61)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(725, 383)
+        Me.DataGridView1.Size = New System.Drawing.Size(894, 383)
         Me.DataGridView1.TabIndex = 0
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(906, 24)
+        Me.MenuStrip1.TabIndex = 21
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'EncerrarToolStripMenuItem
+        '
+        Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
+        Me.EncerrarToolStripMenuItem.Name = "EncerrarToolStripMenuItem"
+        Me.EncerrarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.EncerrarToolStripMenuItem.Text = "Encerrar"
+        '
+        'EncerrarSessãoToolStripMenuItem
+        '
+        Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
+        Me.EncerrarSessãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar Sessão"
+        '
+        'EncerrarSistemaToolStripMenuItem
+        '
+        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
+        Me.EncerrarSistemaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
         '
         'numpedido
         '
         Me.numpedido.HeaderText = "Número de Pedido"
         Me.numpedido.Name = "numpedido"
-        '
-        'pedido
-        '
-        Me.pedido.HeaderText = "Pedido"
-        Me.pedido.Name = "pedido"
         '
         'rua
         '
@@ -104,38 +130,6 @@ Partial Class frm_entregador
         Me.entregar.Image = CType(resources.GetObject("entregar.Image"), System.Drawing.Image)
         Me.entregar.Name = "entregar"
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(906, 24)
-        Me.MenuStrip1.TabIndex = 21
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'EncerrarToolStripMenuItem
-        '
-        Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
-        Me.EncerrarToolStripMenuItem.Name = "EncerrarToolStripMenuItem"
-        Me.EncerrarToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.EncerrarToolStripMenuItem.Text = "Encerrar"
-        '
-        'EncerrarSessãoToolStripMenuItem
-        '
-        Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
-        Me.EncerrarSessãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar Sessão"
-        '
-        'EncerrarSistemaToolStripMenuItem
-        '
-        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
-        Me.EncerrarSistemaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
-        '
         'frm_entregador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -158,8 +152,11 @@ Partial Class frm_entregador
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents EncerrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSessãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents numpedido As DataGridViewTextBoxColumn
-    Friend WithEvents pedido As DataGridViewTextBoxColumn
     Friend WithEvents rua As DataGridViewTextBoxColumn
     Friend WithEvents numero As DataGridViewTextBoxColumn
     Friend WithEvents comp As DataGridViewTextBoxColumn
@@ -168,8 +165,4 @@ Partial Class frm_entregador
     Friend WithEvents estado As DataGridViewTextBoxColumn
     Friend WithEvents nome As DataGridViewTextBoxColumn
     Friend WithEvents entregar As DataGridViewImageColumn
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents EncerrarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EncerrarSessãoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EncerrarSistemaToolStripMenuItem As ToolStripMenuItem
 End Class
