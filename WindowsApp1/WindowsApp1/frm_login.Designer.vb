@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_login
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,15 @@ Partial Class frm_login
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_login))
         Me.gb_login = New System.Windows.Forms.GroupBox()
+        Me.txtcpf = New System.Windows.Forms.MaskedTextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_senha = New System.Windows.Forms.TextBox()
-        Me.txt_cpf = New System.Windows.Forms.TextBox()
         Me.btn_entrar = New System.Windows.Forms.Button()
         Me.gb_login.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,11 +39,11 @@ Partial Class frm_login
         Me.gb_login.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.gb_login.BackColor = System.Drawing.Color.White
         Me.gb_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.gb_login.Controls.Add(Me.txtcpf)
         Me.gb_login.Controls.Add(Me.PictureBox1)
         Me.gb_login.Controls.Add(Me.Label2)
         Me.gb_login.Controls.Add(Me.Label1)
         Me.gb_login.Controls.Add(Me.txt_senha)
-        Me.gb_login.Controls.Add(Me.txt_cpf)
         Me.gb_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.gb_login.Font = New System.Drawing.Font("Moon Flower Bold", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gb_login.ForeColor = System.Drawing.Color.Tomato
@@ -53,6 +53,15 @@ Partial Class frm_login
         Me.gb_login.TabIndex = 0
         Me.gb_login.TabStop = False
         Me.gb_login.Text = "Login"
+        '
+        'txtcpf
+        '
+        Me.txtcpf.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!)
+        Me.txtcpf.Location = New System.Drawing.Point(167, 76)
+        Me.txtcpf.Mask = "999.999.999-99"
+        Me.txtcpf.Name = "txtcpf"
+        Me.txtcpf.Size = New System.Drawing.Size(165, 39)
+        Me.txtcpf.TabIndex = 0
         '
         'PictureBox1
         '
@@ -93,19 +102,9 @@ Partial Class frm_login
         Me.txt_senha.Location = New System.Drawing.Point(167, 165)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.Size = New System.Drawing.Size(165, 39)
-        Me.txt_senha.TabIndex = 2
+        Me.txt_senha.TabIndex = 1
         Me.txt_senha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_senha.UseSystemPasswordChar = True
-        '
-        'txt_cpf
-        '
-        Me.txt_cpf.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cpf.ForeColor = System.Drawing.Color.Black
-        Me.txt_cpf.Location = New System.Drawing.Point(167, 76)
-        Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(165, 39)
-        Me.txt_cpf.TabIndex = 1
-        Me.txt_cpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btn_entrar
         '
@@ -121,7 +120,7 @@ Partial Class frm_login
         Me.btn_entrar.Location = New System.Drawing.Point(472, 331)
         Me.btn_entrar.Name = "btn_entrar"
         Me.btn_entrar.Size = New System.Drawing.Size(105, 42)
-        Me.btn_entrar.TabIndex = 6
+        Me.btn_entrar.TabIndex = 2
         Me.btn_entrar.Text = "Entrar"
         Me.btn_entrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_entrar.UseVisualStyleBackColor = False
@@ -143,6 +142,7 @@ Partial Class frm_login
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
+        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.gb_login.ResumeLayout(False)
         Me.gb_login.PerformLayout()
@@ -154,8 +154,8 @@ Partial Class frm_login
     Friend WithEvents gb_login As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txt_cpf As TextBox
     Friend WithEvents txt_senha As TextBox
     Friend WithEvents btn_entrar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents txtcpf As MaskedTextBox
 End Class

@@ -44,6 +44,7 @@ Partial Class frm_gerente
         Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncessarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl_user = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -201,18 +202,30 @@ Partial Class frm_gerente
         Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar Sistema"
         '
+        'lbl_user
+        '
+        Me.lbl_user.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_user.AutoSize = True
+        Me.lbl_user.Location = New System.Drawing.Point(828, 9)
+        Me.lbl_user.Name = "lbl_user"
+        Me.lbl_user.Size = New System.Drawing.Size(45, 13)
+        Me.lbl_user.TabIndex = 27
+        Me.lbl_user.Text = "Label11"
+        '
         'frm_gerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(919, 498)
+        Me.Controls.Add(Me.lbl_user)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "frm_gerente"
         Me.Text = "Gerencia"
+        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -242,4 +255,5 @@ Partial Class frm_gerente
     Friend WithEvents ListaDeSaboresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CadastrarNovoUsuárioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GerenciarUsuáriosExistentesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lbl_user As Label
 End Class

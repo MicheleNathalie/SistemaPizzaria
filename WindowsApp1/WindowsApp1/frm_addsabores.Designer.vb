@@ -26,12 +26,12 @@ Partial Class frm_addsabores
         Me.txt_nome = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt_valor = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_descricao = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmb_tipo = New System.Windows.Forms.ComboBox()
         Me.btn_confirmar = New System.Windows.Forms.Button()
+        Me.txt_valor = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'txt_nome
@@ -66,14 +66,6 @@ Partial Class frm_addsabores
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Valor"
         '
-        'txt_valor
-        '
-        Me.txt_valor.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_valor.Location = New System.Drawing.Point(335, 57)
-        Me.txt_valor.Name = "txt_valor"
-        Me.txt_valor.Size = New System.Drawing.Size(109, 41)
-        Me.txt_valor.TabIndex = 2
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -93,7 +85,7 @@ Partial Class frm_addsabores
         Me.txt_descricao.Multiline = True
         Me.txt_descricao.Name = "txt_descricao"
         Me.txt_descricao.Size = New System.Drawing.Size(545, 94)
-        Me.txt_descricao.TabIndex = 4
+        Me.txt_descricao.TabIndex = 3
         '
         'Label4
         '
@@ -114,7 +106,7 @@ Partial Class frm_addsabores
         Me.cmb_tipo.Location = New System.Drawing.Point(450, 57)
         Me.cmb_tipo.Name = "cmb_tipo"
         Me.cmb_tipo.Size = New System.Drawing.Size(121, 42)
-        Me.cmb_tipo.TabIndex = 7
+        Me.cmb_tipo.TabIndex = 2
         '
         'btn_confirmar
         '
@@ -127,10 +119,20 @@ Partial Class frm_addsabores
         Me.btn_confirmar.Location = New System.Drawing.Point(217, 247)
         Me.btn_confirmar.Name = "btn_confirmar"
         Me.btn_confirmar.Size = New System.Drawing.Size(149, 43)
-        Me.btn_confirmar.TabIndex = 8
+        Me.btn_confirmar.TabIndex = 4
         Me.btn_confirmar.Text = "Confirmar"
         Me.btn_confirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_confirmar.UseVisualStyleBackColor = True
+        '
+        'txt_valor
+        '
+        Me.txt_valor.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!)
+        Me.txt_valor.Location = New System.Drawing.Point(335, 57)
+        Me.txt_valor.Mask = "99,99"
+        Me.txt_valor.Name = "txt_valor"
+        Me.txt_valor.Size = New System.Drawing.Size(109, 41)
+        Me.txt_valor.TabIndex = 1
+        Me.txt_valor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frm_addsabores
         '
@@ -138,19 +140,20 @@ Partial Class frm_addsabores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
         Me.ClientSize = New System.Drawing.Size(597, 313)
+        Me.Controls.Add(Me.txt_valor)
         Me.Controls.Add(Me.btn_confirmar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cmb_tipo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txt_descricao)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txt_valor)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_nome)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_addsabores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Adicionar Sabores"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -159,10 +162,10 @@ Partial Class frm_addsabores
     Friend WithEvents txt_nome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txt_valor As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_descricao As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents cmb_tipo As ComboBox
     Friend WithEvents btn_confirmar As Button
+    Friend WithEvents txt_valor As MaskedTextBox
 End Class

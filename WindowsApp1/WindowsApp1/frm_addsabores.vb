@@ -36,6 +36,7 @@
             cmb_tipo.Enabled = False
         Else
             With cmb_tipo.Items
+                .Clear()
                 .Add("Pizza")
                 .Add("Borda")
             End With

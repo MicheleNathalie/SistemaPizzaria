@@ -12,7 +12,7 @@
         Try
 
 
-            If (txt_telres.Text = "(11)" Or txt_telres.Text = "") Or txt_estado.Text = "" Or txt_bairro.Text = "" Or txt_cidade.Text = "" Or txt_rua.Text = "" Then
+            If (txt_telres.Text = "(11)_____-____" Or txt_telres.Text = "11" Or txt_telres.Text = "") Or txt_estado.Text = "" Or txt_bairro.Text = "" Or txt_cidade.Text = "" Or txt_rua.Text = "" Then
                 MsgBox("Campos em branco!", vbInformation + vbOKOnly, "Atenção")
             Else
                 If (verifica_cliente = 1) Then
@@ -22,7 +22,7 @@
                     rs = db.Execute(sql)
                     MsgBox("Novo cliente cadastrado.", vbInformation + vbOKOnly, "Sucesso")
                 End If
-                txt_telres.Text = "(11)"
+                txt_telres.Text = "11"
                 txt_cidade.Clear()
                 txt_bairro.Clear()
                 txt_comp.Clear()
@@ -38,15 +38,16 @@
     End Sub
 
     Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_user.Text = nome_funcionario
         verifica_cliente = 0
         conecta_banco()
     End Sub
 
-    Private Sub txt_telres_TextChanged(sender As Object, e As EventArgs) Handles txt_telres.TextChanged
+    Private Sub txt_telres_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txt_telres_LostFocus(sender As Object, e As EventArgs) Handles txt_telres.LostFocus
+    Private Sub txt_telres_LostFocus(sender As Object, e As EventArgs)
         verifica_cliente = 0
         sql = "select * from tb_cliente where telefone='" & txt_telres.Text & "'"
         rs = db.Execute(sql)
@@ -83,7 +84,7 @@
     End Sub
 
     Private Sub btn_limp_Click(sender As Object, e As EventArgs) Handles btn_limp.Click
-        txt_telres.Text = "(11)"
+        txt_telres.Text = "11"
         txt_cidade.Clear()
         txt_bairro.Clear()
         txt_comp.Clear()

@@ -26,14 +26,14 @@ Partial Class frm_adduser
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_nome = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt_cpf = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_senha = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_data = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmb_cargo = New System.Windows.Forms.ComboBox()
         Me.btn_confirmar = New System.Windows.Forms.Button()
+        Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_data = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -54,7 +54,7 @@ Partial Class frm_adduser
         Me.txt_nome.Location = New System.Drawing.Point(32, 55)
         Me.txt_nome.Name = "txt_nome"
         Me.txt_nome.Size = New System.Drawing.Size(411, 41)
-        Me.txt_nome.TabIndex = 2
+        Me.txt_nome.TabIndex = 0
         '
         'Label2
         '
@@ -67,14 +67,6 @@ Partial Class frm_adduser
         Me.Label2.Size = New System.Drawing.Size(43, 34)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "CPF"
-        '
-        'txt_cpf
-        '
-        Me.txt_cpf.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cpf.Location = New System.Drawing.Point(449, 55)
-        Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(195, 41)
-        Me.txt_cpf.TabIndex = 4
         '
         'Label3
         '
@@ -94,7 +86,7 @@ Partial Class frm_adduser
         Me.txt_senha.Location = New System.Drawing.Point(32, 134)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.Size = New System.Drawing.Size(195, 41)
-        Me.txt_senha.TabIndex = 6
+        Me.txt_senha.TabIndex = 2
         '
         'Label4
         '
@@ -107,14 +99,6 @@ Partial Class frm_adduser
         Me.Label4.Size = New System.Drawing.Size(174, 34)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Data de Admissão"
-        '
-        'txt_data
-        '
-        Me.txt_data.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_data.Location = New System.Drawing.Point(233, 134)
-        Me.txt_data.Name = "txt_data"
-        Me.txt_data.Size = New System.Drawing.Size(168, 41)
-        Me.txt_data.TabIndex = 8
         '
         'Label5
         '
@@ -135,7 +119,7 @@ Partial Class frm_adduser
         Me.cmb_cargo.Location = New System.Drawing.Point(407, 135)
         Me.cmb_cargo.Name = "cmb_cargo"
         Me.cmb_cargo.Size = New System.Drawing.Size(237, 40)
-        Me.cmb_cargo.TabIndex = 12
+        Me.cmb_cargo.TabIndex = 4
         '
         'btn_confirmar
         '
@@ -148,10 +132,29 @@ Partial Class frm_adduser
         Me.btn_confirmar.Location = New System.Drawing.Point(264, 191)
         Me.btn_confirmar.Name = "btn_confirmar"
         Me.btn_confirmar.Size = New System.Drawing.Size(149, 43)
-        Me.btn_confirmar.TabIndex = 13
+        Me.btn_confirmar.TabIndex = 5
         Me.btn_confirmar.Text = "Confirmar"
         Me.btn_confirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_confirmar.UseVisualStyleBackColor = True
+        '
+        'txt_cpf
+        '
+        Me.txt_cpf.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!)
+        Me.txt_cpf.Location = New System.Drawing.Point(449, 55)
+        Me.txt_cpf.Mask = "999.999.999-99"
+        Me.txt_cpf.Name = "txt_cpf"
+        Me.txt_cpf.Size = New System.Drawing.Size(195, 41)
+        Me.txt_cpf.TabIndex = 1
+        '
+        'txt_data
+        '
+        Me.txt_data.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!)
+        Me.txt_data.Location = New System.Drawing.Point(233, 135)
+        Me.txt_data.Mask = "99/99/9999"
+        Me.txt_data.Name = "txt_data"
+        Me.txt_data.Size = New System.Drawing.Size(168, 41)
+        Me.txt_data.TabIndex = 3
+        Me.txt_data.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frm_adduser
         '
@@ -159,21 +162,22 @@ Partial Class frm_adduser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
         Me.ClientSize = New System.Drawing.Size(676, 246)
+        Me.Controls.Add(Me.txt_data)
+        Me.Controls.Add(Me.txt_cpf)
         Me.Controls.Add(Me.btn_confirmar)
         Me.Controls.Add(Me.cmb_cargo)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txt_data)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txt_senha)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txt_cpf)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_nome)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_adduser"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Adicionar Usuários"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -182,12 +186,12 @@ Partial Class frm_adduser
     Friend WithEvents Label1 As Label
     Friend WithEvents txt_nome As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txt_cpf As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_senha As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txt_data As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents cmb_cargo As ComboBox
     Friend WithEvents btn_confirmar As Button
+    Friend WithEvents txt_cpf As MaskedTextBox
+    Friend WithEvents txt_data As MaskedTextBox
 End Class
