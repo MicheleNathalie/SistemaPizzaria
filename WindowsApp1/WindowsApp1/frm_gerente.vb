@@ -39,4 +39,12 @@
     Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
         Application.Exit()
     End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub frm_gerente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        verifica_edicao = 0
+    End Sub
 End Class

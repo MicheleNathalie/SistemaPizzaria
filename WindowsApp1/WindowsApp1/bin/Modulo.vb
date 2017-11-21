@@ -4,6 +4,8 @@
     Public sql, diretorio, tipo As String
     Public conexao = Application.StartupPath & "\cadastro.mdb"
     Public cont As Long
+    Public verifica_edicao, id_sabor As Integer
+    Public nome_funcionario As String
     Public aux, resp, nivel, nome_cliente, numero_cliente, complemento_cliente, referencia_cliente, cidade_cliente, estado_cliente, rua_cliente, bairro_cliente As String
 
 

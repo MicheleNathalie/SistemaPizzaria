@@ -26,7 +26,7 @@
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         With DataGridView1
             If .CurrentRow.Cells(3).Selected = True Then
-                sql = "update tb_pedidos set Status= 'Pronto' where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
+                sql = "update tb_pedidos set Status= 'Pronto',nome_pizzaiolo='" & nome_funcionario & "' where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
                 rs = db.Execute(sql)
                 DataGridView1.Rows.Clear()
                 atualiza()

@@ -17,6 +17,7 @@
                         sql = "select * from tb_login where senha='" & txt_senha.Text & "'"
                         If txt_senha.Text = rs.Fields(2).Value Then
                             MsgBox("Acesso permitido!", vbOKOnly, "Bem vindo")
+                            nome_funcionario = rs.Fields(1).Value
                             tipo = rs.Fields(3).Value
                             If tipo = "Vendedor" Then
                                 frm_clientes.ShowDialog()

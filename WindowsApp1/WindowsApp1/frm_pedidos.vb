@@ -144,7 +144,7 @@
                 pedido = pedido & DataGridView1.Rows(i).Cells(1).Value & " " & DataGridView1.Rows(i).Cells(2).Value & " " & DataGridView1.Rows(i).Cells(3).Value & "borda de" & DataGridView1.Rows(i).Cells(4).Value & " " & DataGridView1.Rows(i).Cells(6).Value & ". "
                 i = i + 1
             End While
-            sql = "insert into tb_pedidos (numero_pedido,pedido,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega,status,observacao_motoboy)  values(" & numero_pedido & " , '" & pedido & "' , '" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "','Fazendo','" & txt_obs_motoboy.Text & "')"
+            sql = "insert into tb_pedidos (numero_pedido,pedido,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega,status,observacao_motoboy,nome_vendedor)  values(" & numero_pedido & " , '" & pedido & "' , '" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "','Fazendo','" & txt_obs_motoboy.Text & "', '" & nome_funcionario & "')"
             rs = db.Execute(sql)
             i = i + 1
             MsgBox("pedido feito com sucesso!!!")
