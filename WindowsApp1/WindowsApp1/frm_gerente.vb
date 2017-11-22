@@ -45,6 +45,7 @@
     End Sub
 
     Private Sub frm_gerente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_user.Text = nome_funcionario
         verifica_edicao = 0
     End Sub
 End Class

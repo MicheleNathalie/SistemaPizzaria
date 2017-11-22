@@ -38,60 +38,73 @@ Partial Class frm_funcionarios
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cpf, Me.nome, Me.cargo, Me.senha, Me.admissao, Me.demissao, Me.editar, Me.bloquear, Me.demitir})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(65, 37)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(882, 451)
+        Me.DataGridView1.Size = New System.Drawing.Size(772, 399)
         Me.DataGridView1.TabIndex = 0
         '
         'cpf
         '
         Me.cpf.HeaderText = "CPF"
         Me.cpf.Name = "cpf"
+        Me.cpf.Width = 52
         '
         'nome
         '
         Me.nome.HeaderText = "Nome"
         Me.nome.Name = "nome"
+        Me.nome.Width = 60
         '
         'cargo
         '
         Me.cargo.HeaderText = "Cargo"
         Me.cargo.Name = "cargo"
+        Me.cargo.Width = 60
         '
         'senha
         '
         Me.senha.HeaderText = "Senha"
         Me.senha.Name = "senha"
+        Me.senha.Width = 63
         '
         'admissao
         '
         Me.admissao.HeaderText = "Data de Admissão"
         Me.admissao.Name = "admissao"
+        Me.admissao.Width = 108
         '
         'demissao
         '
         Me.demissao.HeaderText = "Data de Demissao"
         Me.demissao.Name = "demissao"
+        Me.demissao.Width = 109
         '
         'editar
         '
         Me.editar.HeaderText = "Editar"
         Me.editar.Image = CType(resources.GetObject("editar.Image"), System.Drawing.Image)
         Me.editar.Name = "editar"
+        Me.editar.Width = 40
         '
         'bloquear
         '
         Me.bloquear.HeaderText = "Bloquear"
         Me.bloquear.Image = CType(resources.GetObject("bloquear.Image"), System.Drawing.Image)
         Me.bloquear.Name = "bloquear"
+        Me.bloquear.Width = 55
         '
         'demitir
         '
         Me.demitir.HeaderText = "Demissão"
         Me.demitir.Image = CType(resources.GetObject("demitir.Image"), System.Drawing.Image)
         Me.demitir.Name = "demitir"
+        Me.demitir.Width = 59
         '
         'frm_funcionarios
         '
@@ -104,6 +117,7 @@ Partial Class frm_funcionarios
         Me.Name = "frm_funcionarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Funcionários"
+        Me.TopMost = True
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

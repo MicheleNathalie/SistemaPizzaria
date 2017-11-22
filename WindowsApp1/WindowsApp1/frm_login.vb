@@ -1,19 +1,19 @@
 ﻿Public Class frm_login
     Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
         Try
-            If txt_cpf.Text = "" Or txt_senha.Text = "" Then
+            If txtcpf.Text = "" Or txt_senha.Text = "" Then
                 'refinar isso se der tempo
                 MsgBox("Campos em branco!", vbInformation + vbOKOnly, "Atenção")
-                txt_cpf.Focus()
+                txtcpf.Focus()
                 Exit Sub
             Else
-                sql = "select * from tb_login where cpf='" & txt_cpf.Text & "'"
+                sql = "select * from tb_login where cpf='" & txtcpf.Text & "'"
                 rs = db.Execute(sql)
                 If rs.EOF = True Then
                     MsgBox("Conta não cadastrada!", vbExclamation + vbOKOnly, "Erro")
                     Exit Sub
                 Else
-                    If txt_cpf.Text = rs.Fields(0).Value Then
+                    If txtcpf.Text = rs.Fields(0).Value Then
                         sql = "select * from tb_login where senha='" & txt_senha.Text & "'"
                         If txt_senha.Text = rs.Fields(2).Value Then
                             MsgBox("Acesso permitido!", vbOKOnly, "Bem vindo")
@@ -53,7 +53,7 @@
             MsgBox("Erro!", vbExclamation + vbOKOnly)
         End Try
 
-        txt_cpf.Clear()
+        txtcpf.Clear()
         txt_senha.Clear()
 
     End Sub

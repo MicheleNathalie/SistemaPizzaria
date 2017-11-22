@@ -32,6 +32,8 @@ Partial Class frm_pizzaiolo
         Me.pedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.feito = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.btn_voltar = New System.Windows.Forms.Button()
+        Me.lbl_user = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +73,7 @@ Partial Class frm_pizzaiolo
         'DataGridView1
         '
         Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numpedido, Me.pedido, Me.Column2, Me.feito})
         Me.DataGridView1.Location = New System.Drawing.Point(81, 51)
@@ -100,18 +102,49 @@ Partial Class frm_pizzaiolo
         Me.feito.Image = CType(resources.GetObject("feito.Image"), System.Drawing.Image)
         Me.feito.Name = "feito"
         '
+        'btn_voltar
+        '
+        Me.btn_voltar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_voltar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_voltar.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_voltar.ForeColor = System.Drawing.Color.Coral
+        Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
+        Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_voltar.Location = New System.Drawing.Point(11, 440)
+        Me.btn_voltar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btn_voltar.Name = "btn_voltar"
+        Me.btn_voltar.Size = New System.Drawing.Size(108, 39)
+        Me.btn_voltar.TabIndex = 24
+        Me.btn_voltar.Text = "Voltar"
+        Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_voltar.UseVisualStyleBackColor = True
+        '
+        'lbl_user
+        '
+        Me.lbl_user.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_user.AutoSize = True
+        Me.lbl_user.Location = New System.Drawing.Point(796, 9)
+        Me.lbl_user.Name = "lbl_user"
+        Me.lbl_user.Size = New System.Drawing.Size(45, 13)
+        Me.lbl_user.TabIndex = 27
+        Me.lbl_user.Text = "Label11"
+        '
         'frm_pizzaiolo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(887, 485)
+        Me.Controls.Add(Me.lbl_user)
+        Me.Controls.Add(Me.btn_voltar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frm_pizzaiolo"
         Me.Text = "Pedidos"
+        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -130,4 +163,6 @@ Partial Class frm_pizzaiolo
     Friend WithEvents pedido As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents feito As DataGridViewImageColumn
+    Friend WithEvents btn_voltar As Button
+    Friend WithEvents lbl_user As Label
 End Class

@@ -25,11 +25,11 @@
             .txt_estado.Text = ("SP")
             .txt_referencia.Clear()
             .txt_rua.Clear()
-            .txt_telres.Text = ("(11)")
+            .txt_telres.Text = ("11")
             .txt_numero.Clear()
         End With
         With frm_login
-            .txt_cpf.Clear()
+            .txtcpf.Clear()
             .txt_senha.Clear()
         End With
         With frm_pedidos
@@ -38,6 +38,17 @@
             .txt_valor.Clear()
             .cmb_quantidade.Text = ""
             .cmb_tamanho.Text = ""
+        End With
+        With frm_addsabores
+            .txt_descricao.Clear()
+            .txt_nome.Clear()
+            .txt_valor.Clear()
+        End With
+        With frm_adduser
+            .txt_cpf.Clear()
+            .txt_data.Clear()
+            .txt_nome.Clear()
+            .txt_senha.Clear()
         End With
     End Sub
 End Module

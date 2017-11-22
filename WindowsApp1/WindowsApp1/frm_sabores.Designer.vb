@@ -43,7 +43,9 @@ Partial Class frm_sabores
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nome, Me.descricao, Me.valor, Me.editar, Me.excluir})
         Me.DataGridView1.Location = New System.Drawing.Point(56, 53)
@@ -55,28 +57,33 @@ Partial Class frm_sabores
         '
         Me.nome.HeaderText = "Nome"
         Me.nome.Name = "nome"
+        Me.nome.Width = 60
         '
         'descricao
         '
         Me.descricao.HeaderText = "Descrição"
         Me.descricao.Name = "descricao"
+        Me.descricao.Width = 80
         '
         'valor
         '
         Me.valor.HeaderText = "Valor"
         Me.valor.Name = "valor"
+        Me.valor.Width = 56
         '
         'editar
         '
         Me.editar.HeaderText = "Editar"
         Me.editar.Image = CType(resources.GetObject("editar.Image"), System.Drawing.Image)
         Me.editar.Name = "editar"
+        Me.editar.Width = 40
         '
         'excluir
         '
         Me.excluir.HeaderText = "Excluir"
         Me.excluir.Image = CType(resources.GetObject("excluir.Image"), System.Drawing.Image)
         Me.excluir.Name = "excluir"
+        Me.excluir.Width = 44
         '
         'Label1
         '
@@ -102,7 +109,9 @@ Partial Class frm_sabores
         '
         'DataGridView2
         '
-        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nome_borda, Me.descricao_borda, Me.valor_borda, Me.editar_borda, Me.excluir_borda})
         Me.DataGridView2.Location = New System.Drawing.Point(56, 351)
@@ -114,28 +123,33 @@ Partial Class frm_sabores
         '
         Me.nome_borda.HeaderText = "Nome"
         Me.nome_borda.Name = "nome_borda"
+        Me.nome_borda.Width = 60
         '
         'descricao_borda
         '
         Me.descricao_borda.HeaderText = "Descrição"
         Me.descricao_borda.Name = "descricao_borda"
+        Me.descricao_borda.Width = 80
         '
         'valor_borda
         '
         Me.valor_borda.HeaderText = "Valor"
         Me.valor_borda.Name = "valor_borda"
+        Me.valor_borda.Width = 56
         '
         'editar_borda
         '
         Me.editar_borda.HeaderText = "Editar"
         Me.editar_borda.Image = CType(resources.GetObject("editar_borda.Image"), System.Drawing.Image)
         Me.editar_borda.Name = "editar_borda"
+        Me.editar_borda.Width = 40
         '
         'excluir_borda
         '
         Me.excluir_borda.HeaderText = "Excluir"
         Me.excluir_borda.Image = CType(resources.GetObject("excluir_borda.Image"), System.Drawing.Image)
         Me.excluir_borda.Name = "excluir_borda"
+        Me.excluir_borda.Width = 44
         '
         'frm_sabores
         '
@@ -151,6 +165,7 @@ Partial Class frm_sabores
         Me.Name = "frm_sabores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sabores"
+        Me.TopMost = True
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -1,5 +1,6 @@
 ﻿Public Class frm_entregador
     Private Sub frm_entregador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_user.Text = nome_funcionario
         conecta_banco()
         atualiza()
     End Sub

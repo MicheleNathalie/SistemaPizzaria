@@ -3,6 +3,7 @@
     Dim verifica_meia, numero_pedido, i As Integer
     Dim sabor_pizza, pedido As String
     Private Sub frm_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_user.Text = nome_funcionario
         txt_entrega.Text = "Não"
         conecta_banco()
         Verifica_Pedido()
