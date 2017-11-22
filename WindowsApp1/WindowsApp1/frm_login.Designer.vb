@@ -58,7 +58,7 @@ Partial Class frm_login
         '
         Me.txtcpf.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!)
         Me.txtcpf.Location = New System.Drawing.Point(167, 76)
-        Me.txtcpf.Mask = "999.999.999-99"
+        Me.txtcpf.Mask = "999,999,999-99"
         Me.txtcpf.Name = "txtcpf"
         Me.txtcpf.Size = New System.Drawing.Size(165, 39)
         Me.txtcpf.TabIndex = 0
