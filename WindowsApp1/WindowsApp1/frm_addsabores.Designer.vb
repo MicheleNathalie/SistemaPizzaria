@@ -128,7 +128,7 @@ Partial Class frm_addsabores
         '
         Me.txt_valor.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!)
         Me.txt_valor.Location = New System.Drawing.Point(335, 57)
-        Me.txt_valor.Mask = "99,99"
+        Me.txt_valor.Mask = "99.99"
         Me.txt_valor.Name = "txt_valor"
         Me.txt_valor.Size = New System.Drawing.Size(109, 41)
         Me.txt_valor.TabIndex = 1

@@ -24,14 +24,16 @@ Partial Class frm_sabores
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_sabores))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descricao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.excluir = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.cod_borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nome_borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descricao_borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valor_borda = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,11 +49,51 @@ Partial Class frm_sabores
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nome, Me.descricao, Me.valor, Me.editar, Me.excluir})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.nome, Me.descricao, Me.valor, Me.editar, Me.excluir})
         Me.DataGridView1.Location = New System.Drawing.Point(56, 53)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(709, 244)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(51, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 30)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Pizzas"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(51, 318)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 30)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Bordas"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cod_borda, Me.nome_borda, Me.descricao_borda, Me.valor_borda, Me.editar_borda, Me.excluir_borda})
+        Me.DataGridView2.Location = New System.Drawing.Point(56, 351)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(709, 150)
+        Me.DataGridView2.TabIndex = 3
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "cod_pizza"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 80
         '
         'nome
         '
@@ -85,39 +127,11 @@ Partial Class frm_sabores
         Me.excluir.Name = "excluir"
         Me.excluir.Width = 44
         '
-        'Label1
+        'cod_borda
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(51, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 30)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Pizzas"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(51, 318)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 30)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Bordas"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nome_borda, Me.descricao_borda, Me.valor_borda, Me.editar_borda, Me.excluir_borda})
-        Me.DataGridView2.Location = New System.Drawing.Point(56, 351)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(709, 150)
-        Me.DataGridView2.TabIndex = 3
+        Me.cod_borda.HeaderText = "cod_borda"
+        Me.cod_borda.Name = "cod_borda"
+        Me.cod_borda.Width = 83
         '
         'nome_borda
         '
@@ -177,14 +191,16 @@ Partial Class frm_sabores
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents nome_borda As DataGridViewTextBoxColumn
-    Friend WithEvents descricao_borda As DataGridViewTextBoxColumn
-    Friend WithEvents valor_borda As DataGridViewTextBoxColumn
-    Friend WithEvents editar_borda As DataGridViewImageColumn
-    Friend WithEvents excluir_borda As DataGridViewImageColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents nome As DataGridViewTextBoxColumn
     Friend WithEvents descricao As DataGridViewTextBoxColumn
     Friend WithEvents valor As DataGridViewTextBoxColumn
     Friend WithEvents editar As DataGridViewImageColumn
     Friend WithEvents excluir As DataGridViewImageColumn
+    Friend WithEvents cod_borda As DataGridViewTextBoxColumn
+    Friend WithEvents nome_borda As DataGridViewTextBoxColumn
+    Friend WithEvents descricao_borda As DataGridViewTextBoxColumn
+    Friend WithEvents valor_borda As DataGridViewTextBoxColumn
+    Friend WithEvents editar_borda As DataGridViewImageColumn
+    Friend WithEvents excluir_borda As DataGridViewImageColumn
 End Class

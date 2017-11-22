@@ -10,7 +10,11 @@
         Else
             If verifica_edicao = 1 Then
                 atualiza_sabores()
+                cmb_tipo.Enabled = True
                 verifica_edicao = 0
+                frm_sabores.atualiza()
+                Me.Hide()
+                frm_sabores.Show()
             Else
                 If cmb_tipo.SelectedIndex = (0) Then
                     Verifica_Pizza()
