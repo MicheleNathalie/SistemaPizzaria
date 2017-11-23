@@ -117,6 +117,30 @@
         End If
     End Sub
 
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
+        txt_obs.Text = Nothing
+        txt_entrega.Text = Nothing
+        txt_obs_motoboy.Text = Nothing
+        txt_valor.Text = Nothing
+        cmb_borda.Text = Nothing
+        cmb_sabores.Text = Nothing
+        cmb_sabores2.Text = Nothing
+        cmb_sabores2.Enabled = False
+        cmb_tamanho.Text = Nothing
+        cmb_tamanho.SelectedIndex = 2
+        cb_borda.Checked = False
+        cb_entrega.Checked = False
+        cmb_quantidade.Text = Nothing
+        DataGridView1.Rows.Clear()
+        Me.Hide()
+        frm_clientes.Show()
+
+    End Sub
+
     Private Sub btn_ok_Click(sender As Object, e As EventArgs) Handles btn_ok.Click
         sql = "select * from tb_pizzas where nome_pizza= '" & cmb_sabores.Text & "'"
         rs = db.Execute(sql)
@@ -133,10 +157,24 @@
             valor_pizza = valor_pizza * cmb_quantidade.Text
         End If
         If cmb_borda.Enabled = True Then
-            sql = "select* from tb_bordas where nome_borda = '" & cmb_borda.Text & "'"
-            rs = db.Execute(sql)
-            valor_pizza = valor_pizza + rs.Fields(2).Value
+            If cmb_borda.Text <> "" Then
+                sql = "select* from tb_bordas where nome_borda = '" & cmb_borda.Text & "'"
+                rs = db.Execute(sql)
+                valor_pizza = valor_pizza + rs.Fields(2).Value
+            End If
         End If
+
+        If cmb_tamanho.Text = "Grande (8 pedaços)" Then
+            valor_pizza = valor_pizza
+        ElseIf cmb_tamanho.Text = "Brotinho (4 Pedaços)" Then
+            valor_pizza = valor_pizza / 2
+        ElseIf cmb_tamanho.Text = "Media (6 Pedaços)" Then
+            valor_pizza = (valor_pizza / 4) * 3
+        ElseIf cmb_tamanho.Text = "Familia (10 Pedaços)" Then
+            valor_pizza = (valor_pizza / 4) * 5
+
+        End If
+
         With DataGridView1
             .Rows.Add(numero_pedido, cmb_quantidade.Text, cmb_tamanho.Text, sabor_pizza, cmb_borda.Text, valor_pizza, txt_obs.Text, Nothing)
         End With
@@ -149,6 +187,9 @@
         cmb_sabores2.Text = Nothing
         cmb_sabores2.Enabled = False
         cmb_tamanho.Text = Nothing
+        cmb_tamanho.SelectedIndex = 2
+        cb_borda.Checked = False
+        cmb_quantidade.Text = Nothing
     End Sub
 
     Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click

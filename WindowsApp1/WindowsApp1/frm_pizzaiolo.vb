@@ -40,4 +40,9 @@
             End If
         End With
     End Sub
+
+    Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+        Me.Hide()
+        frm_gerente.Show()
+    End Sub
 End Class

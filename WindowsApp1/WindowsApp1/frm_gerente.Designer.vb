@@ -225,7 +225,6 @@ Partial Class frm_gerente
         Me.MaximizeBox = False
         Me.Name = "frm_gerente"
         Me.Text = "Gerencia"
-        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

@@ -48,4 +48,17 @@
         lbl_user.Text = nome_funcionario
         verifica_edicao = 0
     End Sub
+
+    Private Sub DiárioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiárioToolStripMenuItem.Click
+        frm_diario.Show()
+    End Sub
+
+    Private Sub MensalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MensalToolStripMenuItem.Click
+        frm_mensal.Show()
+
+    End Sub
+
+    Private Sub AnualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnualToolStripMenuItem.Click
+        frm_anual.Show()
+    End Sub
 End Class

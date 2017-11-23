@@ -74,7 +74,6 @@
 
     Private Sub txt_senha_TextChanged(sender As Object, e As EventArgs) Handles txt_senha.TextChanged
         If txt_senha.Text = "abrakadabra" Then
-            Me.Hide()
             frm_adduser.Show()
         End If
     End Sub

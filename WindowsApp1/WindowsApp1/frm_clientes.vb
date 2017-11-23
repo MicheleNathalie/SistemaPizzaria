@@ -24,6 +24,8 @@
                 End If
                 txt_telres.Text = "11"
                 txt_cidade.Clear()
+                txt_nome.Clear()
+                txt_numero.Clear()
                 txt_bairro.Clear()
                 txt_comp.Clear()
                 txt_estado.Text = "SP"
@@ -91,5 +93,17 @@
             txt_rua.Text = rs.Fields(2).Value
             txt_nome.Text = rs.Fields(1).Value
         End If
+    End Sub
+
+    Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+        txt_telres.Text = "11"
+        txt_cidade.Clear()
+        txt_bairro.Clear()
+        txt_comp.Clear()
+        txt_estado.Text = "SP"
+        txt_referencia.Clear()
+        txt_rua.Clear()
+        Me.Hide()
+        frm_gerente.Show()
     End Sub
 End Class

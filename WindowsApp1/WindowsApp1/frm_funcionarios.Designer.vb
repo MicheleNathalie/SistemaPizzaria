@@ -33,7 +33,14 @@ Partial Class frm_funcionarios
         Me.editar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.bloquear = New System.Windows.Forms.DataGridViewImageColumn()
         Me.demitir = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rbd_demitido = New System.Windows.Forms.RadioButton()
+        Me.rdb_bloqueada = New System.Windows.Forms.RadioButton()
+        Me.rdb_ativa = New System.Windows.Forms.RadioButton()
+        Me.txt_nome = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -44,9 +51,9 @@ Partial Class frm_funcionarios
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cpf, Me.nome, Me.cargo, Me.senha, Me.admissao, Me.demissao, Me.editar, Me.bloquear, Me.demitir})
-        Me.DataGridView1.Location = New System.Drawing.Point(65, 37)
+        Me.DataGridView1.Location = New System.Drawing.Point(223, 37)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(772, 399)
+        Me.DataGridView1.Size = New System.Drawing.Size(642, 399)
         Me.DataGridView1.TabIndex = 0
         '
         'cpf
@@ -106,19 +113,87 @@ Partial Class frm_funcionarios
         Me.demitir.Name = "demitir"
         Me.demitir.Width = 59
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.rbd_demitido)
+        Me.GroupBox1.Controls.Add(Me.rdb_bloqueada)
+        Me.GroupBox1.Controls.Add(Me.rdb_ativa)
+        Me.GroupBox1.Controls.Add(Me.txt_nome)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox1.Font = New System.Drawing.Font("Moon Flower Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 89)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 298)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Pesquisar"
+        '
+        'rbd_demitido
+        '
+        Me.rbd_demitido.AutoSize = True
+        Me.rbd_demitido.Location = New System.Drawing.Point(48, 222)
+        Me.rbd_demitido.Name = "rbd_demitido"
+        Me.rbd_demitido.Size = New System.Drawing.Size(93, 33)
+        Me.rbd_demitido.TabIndex = 4
+        Me.rbd_demitido.TabStop = True
+        Me.rbd_demitido.Text = "Demitido"
+        Me.rbd_demitido.UseVisualStyleBackColor = True
+        '
+        'rdb_bloqueada
+        '
+        Me.rdb_bloqueada.AutoSize = True
+        Me.rdb_bloqueada.Location = New System.Drawing.Point(48, 183)
+        Me.rdb_bloqueada.Name = "rdb_bloqueada"
+        Me.rdb_bloqueada.Size = New System.Drawing.Size(109, 33)
+        Me.rdb_bloqueada.TabIndex = 3
+        Me.rdb_bloqueada.TabStop = True
+        Me.rdb_bloqueada.Text = "Bloqueada"
+        Me.rdb_bloqueada.UseVisualStyleBackColor = True
+        '
+        'rdb_ativa
+        '
+        Me.rdb_ativa.AutoSize = True
+        Me.rdb_ativa.Location = New System.Drawing.Point(48, 144)
+        Me.rdb_ativa.Name = "rdb_ativa"
+        Me.rdb_ativa.Size = New System.Drawing.Size(73, 33)
+        Me.rdb_ativa.TabIndex = 2
+        Me.rdb_ativa.TabStop = True
+        Me.rdb_ativa.Text = "Ativa"
+        Me.rdb_ativa.UseVisualStyleBackColor = True
+        '
+        'txt_nome
+        '
+        Me.txt_nome.Location = New System.Drawing.Point(29, 85)
+        Me.txt_nome.Name = "txt_nome"
+        Me.txt_nome.Size = New System.Drawing.Size(141, 39)
+        Me.txt_nome.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(24, 53)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Nome:"
+        '
         'frm_funcionarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PeachPuff
         Me.ClientSize = New System.Drawing.Size(896, 475)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_funcionarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Funcionários"
-        Me.TopMost = True
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -133,4 +208,10 @@ Partial Class frm_funcionarios
     Friend WithEvents editar As DataGridViewImageColumn
     Friend WithEvents bloquear As DataGridViewImageColumn
     Friend WithEvents demitir As DataGridViewImageColumn
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents rbd_demitido As RadioButton
+    Friend WithEvents rdb_bloqueada As RadioButton
+    Friend WithEvents rdb_ativa As RadioButton
+    Friend WithEvents txt_nome As TextBox
+    Friend WithEvents Label1 As Label
 End Class

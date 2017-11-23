@@ -62,6 +62,7 @@ Partial Class frm_login
         Me.txtcpf.Name = "txtcpf"
         Me.txtcpf.Size = New System.Drawing.Size(165, 39)
         Me.txtcpf.TabIndex = 0
+        Me.txtcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PictureBox1
         '
@@ -142,7 +143,6 @@ Partial Class frm_login
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.gb_login.ResumeLayout(False)
         Me.gb_login.PerformLayout()

@@ -64,10 +64,7 @@
         frm_funcionarios.Show()
     End Sub
 
-    Private Sub txt_cpf_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txt_cpf.MaskInputRejected
-
-    End Sub
-
+    
     Private Sub txt_cpf_LostFocus(sender As Object, e As EventArgs) Handles txt_cpf.LostFocus
         objeto.cnpj = txt_cpf.Text
 

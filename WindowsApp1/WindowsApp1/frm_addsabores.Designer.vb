@@ -153,7 +153,6 @@ Partial Class frm_addsabores
         Me.Name = "frm_addsabores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Adicionar Sabores"
-        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
