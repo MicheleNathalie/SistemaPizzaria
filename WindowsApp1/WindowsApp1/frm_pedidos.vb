@@ -57,6 +57,7 @@
             Loop
         End With
         txt_entrega.Enabled = False
+        cmb_borda.Text = Nothing
     End Sub
     Private Sub cb_entrega_CheckedChanged(sender As Object, e As EventArgs) Handles cb_entrega.CheckedChanged
         If cb_entrega.Checked = True Then
@@ -97,6 +98,23 @@
                 End If
             End If
         End With
+    End Sub
+
+    Private Sub btn_info_Click(sender As Object, e As EventArgs) Handles btn_info.Click
+        If cmb_sabores.Text = Nothing And cmb_borda.Text = Nothing Then
+            MsgBox("Escolha uma pizza ou borda para ter informações")
+        ElseIf cmb_sabores.Text <> Nothing Then
+            sql = "select* from tb_pizzas where nome_pizza='" & cmb_sabores.Text & "'"
+            rs = db.Execute(sql)
+            MessageBox.Show("nome pizza: " & rs.Fields(1).Value + vbNewLine + "R$" & rs.Fields(2).Value)
+            MessageBox.Show("Descrição:" & rs.Fields(3).Value)
+            If cmb_borda.Text <> Nothing Then
+                sql = "select* from tb_bordas where nome_borda='" & cmb_borda.Text & "'"
+                rs = db.Execute(sql)
+                MessageBox.Show("nome borda: " & rs.Fields(1).Value + vbNewLine + "R$" & rs.Fields(2).Value)
+                MessageBox.Show("Descrição:" & rs.Fields(3).Value)
+            End If
+        End If
     End Sub
 
     Private Sub btn_ok_Click(sender As Object, e As EventArgs) Handles btn_ok.Click

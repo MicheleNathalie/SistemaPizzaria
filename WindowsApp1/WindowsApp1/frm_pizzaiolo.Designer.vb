@@ -144,7 +144,6 @@ Partial Class frm_pizzaiolo
         Me.MaximizeBox = False
         Me.Name = "frm_pizzaiolo"
         Me.Text = "Pedidos"
-        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

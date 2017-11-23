@@ -20,7 +20,7 @@
         rs = db.Execute(sql)
         While rs.EOF = False
             With DataGridView1
-                .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(10).Value, Nothing)
+                .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(11).Value, Nothing)
                 rs.MoveNext()
             End With
         End While
@@ -34,6 +34,7 @@
                 sql = "select * from tb_pedidos where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
                 rs = db.Execute(sql)
                 sql = "insert into tb_gerente values " & .CurrentRow.Cells(0).Value & ", '" & rs.Fields(2).Value & "','" & s & "'"
+                rs = db.Execute(sql)
                 DataGridView1.Rows.Clear()
                 atualiza()
             End If

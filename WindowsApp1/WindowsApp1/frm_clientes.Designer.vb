@@ -390,7 +390,6 @@ Partial Class frm_clientes
         Me.MaximizeBox = False
         Me.Name = "frm_clientes"
         Me.Text = "Voltar"
-        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

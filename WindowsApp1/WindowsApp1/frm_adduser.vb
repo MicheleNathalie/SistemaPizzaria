@@ -48,10 +48,20 @@
         End If
     End Sub
     Sub atualiza_usuario()
+        objeto.cnpj = txt_cpf.Text
+
+        If objeto.isCpfValido = False Then
+            MessageBox.Show("CPF Iválido!", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txt_cpf.Clear()
+            Exit Sub
+        End If
         sql = "update tb_login set nome='" & txt_nome.Text & "',senha= '" & txt_senha.Text & "' , tipo=  '" & cmb_cargo.Text & "', data_contratacao= '" & txt_data.Text & "' where cpf= '" & txt_cpf.Text & "'"
         rs = db.Execute(sql)
         MsgBox("funcionário alterado!!")
         limpar()
+        frm_funcionarios.atualiza()
+        Me.Hide()
+        frm_funcionarios.Show()
     End Sub
 
     Private Sub txt_cpf_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txt_cpf.MaskInputRejected

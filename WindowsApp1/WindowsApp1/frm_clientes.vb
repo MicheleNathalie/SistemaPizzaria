@@ -29,7 +29,7 @@
                 txt_estado.Text = "SP"
                 txt_referencia.Clear()
                 txt_rua.Clear()
-                Me.Close()
+                Me.Hide()
                 frm_pedidos.ShowDialog()
             End If
         Catch ex As Exception
@@ -62,7 +62,7 @@
 
     Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
         Me.Hide()
-        frm_login.ShowDialog()
+        frm_login.Show()
     End Sub
 
     Private Sub btn_limp_Click(sender As Object, e As EventArgs) Handles btn_limp.Click

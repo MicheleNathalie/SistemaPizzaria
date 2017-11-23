@@ -1,14 +1,7 @@
 ﻿Public Class frm_funcionarios
     Private Sub frm_funcionarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
-        sql = "select * from tb_login"
-        rs = db.Execute(sql)
-        While rs.EOF = False
-            With DataGridView1
-                .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(3).Value, rs.Fields(2).Value, rs.Fields(4).Value, rs.Fields(5).Value, Nothing, Nothing, Nothing, Nothing)
-                rs.MoveNext()
-            End With
-        End While
+        atualiza()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -19,6 +12,7 @@
                     sql = "delete * from tb_login where cpf= '" & .CurrentRow.Cells(0).Value & "'"
                     rs = db.Execute(sql)
                     MsgBox("Funcionário excluido!!!")
+                    atualiza()
                 End If
             End If
             If .CurrentRow.Cells(7).Selected Then
@@ -27,6 +21,7 @@
                     sql = "update tb_login set status='Bloqueada' where cpf= '" & .CurrentRow.Cells(0).Value & "'"
                     rs = db.Execute(sql)
                     MsgBox("Funcionário bloqueado!!!")
+                    atualiza()
                 End If
             End If
             If .CurrentRow.Cells(6).Selected Then
@@ -38,9 +33,20 @@
                     .cmb_cargo.Text = DataGridView1.CurrentRow.Cells(2).Value
                 End With
                 verifica_edicao = 1
-                Me.Close()
-                frm_adduser.ShowDialog()
+                Me.Hide()
+                frm_adduser.Show()
             End If
         End With
+    End Sub
+    Sub atualiza()
+        sql = "select * from tb_login"
+        rs = db.Execute(sql)
+        DataGridView1.Rows.Clear()
+        While rs.EOF = False
+            With DataGridView1
+                .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(3).Value, rs.Fields(2).Value, rs.Fields(4).Value, rs.Fields(5).Value, Nothing, Nothing, Nothing, Nothing)
+                rs.MoveNext()
+            End With
+        End While
     End Sub
 End Class

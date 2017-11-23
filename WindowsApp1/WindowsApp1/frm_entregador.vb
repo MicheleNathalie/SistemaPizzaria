@@ -19,7 +19,7 @@
         rs = db.Execute(sql)
         While rs.EOF = False
             With DataGridView1
-                .Rows.Add(rs.Fields(0).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(6).Value, rs.Fields(5).Value, rs.Fields(9).Value, rs.Fields(8).Value, rs.Fields(8).Value, rs.Fields(9).Value, rs.Fields(12).Value, Nothing)
+                .Rows.Add(rs.Fields(0).Value, rs.Fields(4).Value, rs.Fields(5).Value, rs.Fields(7).Value, rs.Fields(6).Value, rs.Fields(10).Value, rs.Fields(9).Value, rs.Fields(3).Value, rs.Fields(13).Value, Nothing)
                 rs.MoveNext()
             End With
         End While
@@ -27,7 +27,7 @@
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         With DataGridView1
-            If .CurrentRow.Cells(8).Selected = True Then
+            If .CurrentRow.Cells(9).Selected = True Then
                 sql = "update tb_pedidos set Status= 'Entregue',nome_motoboy='" & nome_funcionario & "' where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
                 rs = db.Execute(sql)
                 atualiza()

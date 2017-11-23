@@ -15,7 +15,7 @@
                 Else
                     If txtcpf.Text = rs.Fields(0).Value Then
                         sql = "select * from tb_login where senha='" & txt_senha.Text & "'"
-                        If txt_senha.Text = rs.Fields(2).Value Then
+                        If txt_senha.Text = rs.Fields(2).Value And rs.Fields(6).Value = "Ativa" Then
                             MsgBox("Acesso permitido!", vbOKOnly, "Bem vindo")
                             nome_funcionario = rs.Fields(1).Value
                             tipo = rs.Fields(3).Value

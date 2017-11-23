@@ -358,8 +358,8 @@ Partial Class frm_pedidos
         '
         'txt_valor
         '
+        Me.txt_valor.Enabled = False
         Me.txt_valor.Location = New System.Drawing.Point(617, 132)
-        Me.txt_valor.Mask = "999.99"
         Me.txt_valor.Name = "txt_valor"
         Me.txt_valor.Size = New System.Drawing.Size(149, 41)
         Me.txt_valor.TabIndex = 22
@@ -368,7 +368,6 @@ Partial Class frm_pedidos
         'txt_entrega
         '
         Me.txt_entrega.Location = New System.Drawing.Point(617, 64)
-        Me.txt_entrega.Mask = "99.99"
         Me.txt_entrega.Name = "txt_entrega"
         Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
         Me.txt_entrega.TabIndex = 23
@@ -448,8 +447,6 @@ Partial Class frm_pedidos
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_pedidos"
         Me.Text = "Pedidos"
-        Me.TopMost = True
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
