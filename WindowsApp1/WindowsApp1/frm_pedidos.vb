@@ -1,8 +1,9 @@
 ﻿Public Class frm_pedidos
     Dim valor_pizza, valor_total As Double
     Dim verifica_meia, numero_pedido, i As Integer
-    Dim sabor_pizza, pedido As String
+    Dim sabor_pizza, pedido, s As String
     Private Sub frm_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        s = DateTime.Now.ToString("ddMMyyyy")
         lbl_user.Text = nome_funcionario
         txt_entrega.Text = "Não"
         conecta_banco()
@@ -145,7 +146,7 @@
                 pedido = pedido & DataGridView1.Rows(i).Cells(1).Value & " " & DataGridView1.Rows(i).Cells(2).Value & " " & DataGridView1.Rows(i).Cells(3).Value & "borda de" & DataGridView1.Rows(i).Cells(4).Value & " " & DataGridView1.Rows(i).Cells(6).Value & ". "
                 i = i + 1
             End While
-            sql = "insert into tb_pedidos (numero_pedido,pedido,valor_pedido,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega,status,observacao_motoboy,nome_vendedor)  values(" & numero_pedido & " , '" & pedido & "' , '" & txt_valor.Text & "','" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "','Fazendo','" & txt_obs_motoboy.Text & "', '" & nome_funcionario & "')"
+            sql = "insert into tb_pedidos (numero_pedido,pedido,valor_pedido,nome,rua,numero,bairro,complemento,referencia,estado,cidade,entrega,status,observacao_motoboy,nome_vendedor,data_pedido)  values(" & numero_pedido & " , '" & pedido & "' , '" & txt_valor.Text & "','" & nome_cliente & "' , '" & rua_cliente & "' , '" & numero_cliente & "' , '" & bairro_cliente & "' , '" & complemento_cliente & "' , '" & referencia_cliente & "' , '" & estado_cliente & "' , '" & cidade_cliente & "' , '" & txt_entrega.Text & "','Fazendo','" & txt_obs_motoboy.Text & "', '" & nome_funcionario & "','" & s & "')"
             rs = db.Execute(sql)
             i = i + 1
             MsgBox("pedido feito com sucesso!!!")
