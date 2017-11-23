@@ -47,24 +47,6 @@
 
     End Sub
 
-    Private Sub txt_telres_LostFocus(sender As Object, e As EventArgs)
-        verifica_cliente = 0
-        sql = "select * from tb_cliente where telefone='" & txt_telres.Text & "'"
-        rs = db.Execute(sql)
-        If rs.BOF = True Then
-            'MessageBox.Show("Usuário não cadastrado!!" + vbNewLine + "Ele será cadastro ao clicar em seguinte", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            verifica_cliente = 1
-        Else
-            txt_bairro.Text = rs.Fields(4).Value
-            txt_cidade.Text = rs.Fields(7).Value
-            txt_comp.Text = rs.Fields(5).Value
-            txt_estado.Text = rs.Fields(8).Value
-            txt_numero.Text = rs.Fields(3).Value
-            txt_referencia.Text = rs.Fields(6).Value
-            txt_rua.Text = rs.Fields(2).Value
-            txt_nome.Text = rs.Fields(1).Value
-        End If
-    End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_nome.TextChanged
 
@@ -79,7 +61,7 @@
     End Sub
 
     Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
-        Me.Close()
+        Me.Hide()
         frm_login.ShowDialog()
     End Sub
 
@@ -91,5 +73,23 @@
         txt_estado.Text = "SP"
         txt_referencia.Clear()
         txt_rua.Clear()
+    End Sub
+
+    Private Sub txt_telres_LostFocus(sender As Object, e As EventArgs) Handles txt_telres.LostFocus
+        verifica_cliente = 0
+        sql = "select * from tb_cliente where telefone='" & txt_telres.Text & "'"
+        rs = db.Execute(sql)
+        If rs.BOF = True Then
+            verifica_cliente = 1
+        Else
+            txt_bairro.Text = rs.Fields(4).Value
+            txt_cidade.Text = rs.Fields(7).Value
+            txt_comp.Text = rs.Fields(5).Value
+            txt_estado.Text = rs.Fields(8).Value
+            txt_numero.Text = rs.Fields(3).Value
+            txt_referencia.Text = rs.Fields(6).Value
+            txt_rua.Text = rs.Fields(2).Value
+            txt_nome.Text = rs.Fields(1).Value
+        End If
     End Sub
 End Class

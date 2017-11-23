@@ -1,5 +1,7 @@
 ﻿Public Class frm_pizzaiolo
+    Dim s As String
     Private Sub frm_pizzaiolo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        s = DateTime.Now.ToString("ddMMyyyy")
         lbl_user.Text = nome_funcionario
         conecta_banco()
         atualiza()
@@ -31,7 +33,7 @@
                 rs = db.Execute(sql)
                 sql = "select * from tb_pedidos where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
                 rs = db.Execute(sql)
-                sql = "insert into tb_gerente values " & .CurrentRow.Cells(0).Value & ", '" & rs.Fields(2).Value & "'"
+                sql = "insert into tb_gerente values " & .CurrentRow.Cells(0).Value & ", '" & rs.Fields(2).Value & "','" & s & "'"
                 DataGridView1.Rows.Clear()
                 atualiza()
             End If

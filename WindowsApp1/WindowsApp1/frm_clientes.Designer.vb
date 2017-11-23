@@ -25,6 +25,7 @@ Partial Class frm_clientes
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_clientes))
         Me.btn_seguir = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_telres = New System.Windows.Forms.MaskedTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,7 +42,6 @@ Partial Class frm_clientes
         Me.txt_referencia = New System.Windows.Forms.TextBox()
         Me.txt_rua = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_estado = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -104,6 +104,18 @@ Partial Class frm_clientes
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Dados Cadastrais"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Moon Flower Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(17, 40)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 34)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Telefone:"
         '
         'txt_telres
         '
@@ -272,18 +284,6 @@ Partial Class frm_clientes
         Me.Label7.Size = New System.Drawing.Size(84, 34)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Estado:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Moon Flower Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 40)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 34)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Telefone:"
         '
         'txt_estado
         '

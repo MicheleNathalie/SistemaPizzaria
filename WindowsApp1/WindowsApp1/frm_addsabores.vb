@@ -18,11 +18,23 @@
             Else
                 If cmb_tipo.SelectedIndex = (0) Then
                     Verifica_Pizza()
-                    sql = "insert into tb_pizzas (id_pizza,nome_pizza,preco_pizza,descricao_pizza) values (" & id & " , '" & txt_nome.Text & "' , '" & txt_valor.Text & "' , '" & txt_descricao.Text & "')"
+                    sql = "select* from tb_pizzas where nome_pizza='" & txt_nome.Text & "'"
                     rs = db.Execute(sql)
-                    MsgBox("nova pizza cadastrada!")
-                    limpar()
+                    If rs.EOF = False Then
+                        MsgBox("Esse Sabor já exite, coloque outro")
+                        Exit Sub
+                        sql = "insert into tb_pizzas (id_pizza,nome_pizza,preco_pizza,descricao_pizza) values (" & id & " , '" & txt_nome.Text & "' , '" & txt_valor.Text & "' , '" & txt_descricao.Text & "')"
+                        rs = db.Execute(sql)
+                        MsgBox("nova pizza cadastrada!")
+                        limpar()
+                    End If
                 Else
+                    sql = "select* from tb_bordas where nome_borda='" & txt_nome.Text & "'"
+                    rs = db.Execute(sql)
+                    If rs.EOF = False Then
+                        MsgBox("Esse Sabor já exite, coloque outro")
+                        Exit Sub
+                    End If
                     Verifica_Borda()
                     sql = "insert into tb_bordas(id_borda,nome_borda,preco_borda,descricao_borda) values (" & id & " , '" & txt_nome.Text & "' , '" & txt_valor.Text & "' , '" & txt_descricao.Text & "')"
                     rs = db.Execute(sql)
@@ -70,11 +82,23 @@
     End Sub
     Sub atualiza_sabores()
         If cmb_tipo.SelectedIndex = (0) Then
-            sql = "update tb_pizzas set nome_pizza='" & txt_nome.Text & "', preco_pizza = '" & txt_valor.Text & "', descricao_pizza='" & txt_descricao.Text & "' where id_pizza= " & id_sabor & ""
+            sql = "select* from tb_pizzas where nome_pizza='" & txt_nome.Text & "'"
             rs = db.Execute(sql)
-            MsgBox("pizza alterada!")
-            limpar()
+            If rs.EOF = False Then
+                MsgBox("Esse Sabor já exite, coloque outro")
+            Else
+                sql = "update tb_pizzas set nome_pizza='" & txt_nome.Text & "', preco_pizza = '" & txt_valor.Text & "', descricao_pizza='" & txt_descricao.Text & "' where id_pizza= " & id_sabor & ""
+                rs = db.Execute(sql)
+                MsgBox("pizza alterada!")
+                limpar()
+            End If
         Else
+            sql = "select* from tb_bordas where nome_borda='" & txt_nome.Text & "'"
+            rs = db.Execute(sql)
+            If rs.EOF = False Then
+                MsgBox("Esse Sabor já exite, coloque outro")
+                Exit Sub
+            End If
             sql = "update tb_bordas set nome_borda='" & txt_nome.Text & "', preco_borda = '" & txt_valor.Text & "', descricao_borda='" & txt_descricao.Text & "' where id_borda= " & id_sabor & ""
             rs = db.Execute(sql)
             MsgBox("borda alterada!")
@@ -82,4 +106,6 @@
         End If
     End Sub
 
+    Private Sub txt_nome_TextChanged(sender As Object, e As EventArgs) Handles txt_nome.TextChanged
+    End Sub
 End Class

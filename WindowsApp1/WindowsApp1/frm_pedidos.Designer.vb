@@ -368,7 +368,6 @@ Partial Class frm_pedidos
         'txt_entrega
         '
         Me.txt_entrega.Location = New System.Drawing.Point(617, 64)
-        Me.txt_entrega.Mask = "99,99"
         Me.txt_entrega.Name = "txt_entrega"
         Me.txt_entrega.Size = New System.Drawing.Size(149, 41)
         Me.txt_entrega.TabIndex = 23
