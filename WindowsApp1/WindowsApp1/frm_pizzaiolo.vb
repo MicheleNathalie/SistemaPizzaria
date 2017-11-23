@@ -29,6 +29,9 @@
             If .CurrentRow.Cells(3).Selected = True Then
                 sql = "update tb_pedidos set Status= 'Pronto',nome_pizzaiolo='" & nome_funcionario & "' where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
                 rs = db.Execute(sql)
+                sql = "select * from tb_pedidos where numero_pedido=" & .CurrentRow.Cells(0).Value & ""
+                rs = db.Execute(sql)
+                sql = "insert into tb_gerente values " & .CurrentRow.Cells(0).Value & ", '" & rs.Fields(2).Value & "'"
                 DataGridView1.Rows.Clear()
                 atualiza()
             End If
