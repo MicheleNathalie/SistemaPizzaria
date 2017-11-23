@@ -141,7 +141,7 @@ Partial Class frm_adduser
         '
         Me.txt_cpf.Font = New System.Drawing.Font("Moon Flower Bold", 21.75!)
         Me.txt_cpf.Location = New System.Drawing.Point(449, 55)
-        Me.txt_cpf.Mask = "999.999.999-99"
+        Me.txt_cpf.Mask = "999,999,999-99"
         Me.txt_cpf.Name = "txt_cpf"
         Me.txt_cpf.Size = New System.Drawing.Size(195, 41)
         Me.txt_cpf.TabIndex = 1
